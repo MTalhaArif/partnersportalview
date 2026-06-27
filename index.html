@@ -2053,11 +2053,12 @@
         }
         
         .client-card-premium {
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 102, 41, 0.1);
-            border-radius: var(--radius-lg);
-            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(14px);
+            border: 2px solid rgba(255, 102, 41, 0.15);
+            border-radius: var(--radius-xl);
+            padding: 40px 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -2091,8 +2092,8 @@
         }
 
         .client-logo {
-            width: 120px;
-            height: 80px;
+            width: 180px;
+            height: 110px;
             object-fit: contain;
             margin-bottom: 15px;
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -2537,55 +2538,55 @@
                 <p class="section-desc">Our dedicated client portal empowers these leading institutions to streamline their global admissions and maximize efficiency.</p>
             </div>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 36px;">
                 
                 <!-- United Education -->
-                <div class="client-card-premium reveal reveal-delay-1">
+                <div class="client-card-premium reveal-pop reveal-delay-1">
                     <div class="client-badge">Portal User</div>
                     <img src="assets/logo_united.jpg" alt="United Education" class="client-logo">
                     <div class="client-name">United Education</div>
                 </div>
 
                 <!-- Ask Uni -->
-                <div class="client-card-premium reveal reveal-delay-2">
+                <div class="client-card-premium reveal-pop reveal-delay-2">
                     <div class="client-badge">Portal User</div>
                     <img src="assets/logo_askuni.jpg" alt="Ask Uni" class="client-logo">
                     <div class="client-name">Ask Uni</div>
                 </div>
 
                 <!-- Alibaba Academy -->
-                <div class="client-card-premium reveal reveal-delay-3">
+                <div class="client-card-premium reveal-pop reveal-delay-3">
                     <div class="client-badge">Portal User</div>
                     <img src="assets/logo_alibaba.jpg" alt="Alibaba Academy" class="client-logo">
                     <div class="client-name">Alibaba Academy</div>
                 </div>
 
                 <!-- Topkapi University -->
-                <div class="client-card-premium reveal reveal-delay-4">
+                <div class="client-card-premium reveal-pop reveal-delay-4">
                     <img src="https://www.topkapi.edu.tr/resources/files/logo_tr.jpg" alt="Topkapi University" class="client-logo" onerror="this.src='assets/istanbul_bg.png'">
                     <div class="client-name">Topkapi University</div>
                 </div>
 
                 <!-- Gelisim University -->
-                <div class="client-card-premium reveal reveal-delay-1">
+                <div class="client-card-premium reveal-pop reveal-delay-1">
                     <img src="assets/logo_gelisim.png" alt="Gelisim University" class="client-logo">
                     <div class="client-name">Gelisim University</div>
                 </div>
 
                 <!-- Aydin University -->
-                <div class="client-card-premium reveal reveal-delay-2">
+                <div class="client-card-premium reveal-pop reveal-delay-2">
                     <img src="assets/logo_aydin.png" alt="Aydin University" class="client-logo">
                     <div class="client-name">Aydin University</div>
                 </div>
 
                 <!-- ISTUN -->
-                <div class="client-card-premium reveal reveal-delay-3">
+                <div class="client-card-premium reveal-pop reveal-delay-3">
                     <img src="assets/logo_istun.png" alt="ISTUN" class="client-logo">
                     <div class="client-name">ISTUN</div>
                 </div>
 
                 <!-- Okan University -->
-                <div class="client-card-premium reveal reveal-delay-4">
+                <div class="client-card-premium reveal-pop reveal-delay-4">
                     <img src="https://www.okan.edu.tr/theme/img/logo.svg" alt="Okan University" class="client-logo">
                     <div class="client-name">Okan University</div>
                 </div>
@@ -2593,16 +2594,16 @@
             </div>
             
             <div style="margin-top: 50px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px;">
-                <div class="client-card-premium reveal" style="padding: 20px;">
+                <div class="client-card-premium reveal-pop" style="padding: 20px;">
                     <div class="client-name">Hightech Prep</div>
                 </div>
-                <div class="client-card-premium reveal reveal-delay-1" style="padding: 20px;">
+                <div class="client-card-premium reveal-pop reveal-delay-1" style="padding: 20px;">
                     <div class="client-name">Tecrix College</div>
                 </div>
-                <div class="client-card-premium reveal reveal-delay-2" style="padding: 20px;">
+                <div class="client-card-premium reveal-pop reveal-delay-2" style="padding: 20px;">
                     <div class="client-name">Navigate360</div>
                 </div>
-                <div class="client-card-premium reveal reveal-delay-3" style="padding: 20px;">
+                <div class="client-card-premium reveal-pop reveal-delay-3" style="padding: 20px;">
                     <div class="client-name">VIG</div>
                 </div>
             </div>
@@ -2812,7 +2813,7 @@
         const revealObs = new IntersectionObserver(entries => {
             entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
         }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-        document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+        document.querySelectorAll('.reveal, .reveal-pop').forEach(el => revealObs.observe(el));
 
         // Counter animation
         const counterObs = new IntersectionObserver(entries => {
