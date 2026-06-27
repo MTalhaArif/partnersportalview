@@ -2040,7 +2040,92 @@
                 grid-template-columns: 1fr;
             }
         }
-    </style>
+    
+        /* ============================================
+           NEW CLIENTS CSS
+        ============================================ */
+        .clients-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 20px 0;
+            background: linear-gradient(180deg, transparent, rgba(255,102,41,0.02), transparent);
+        }
+        
+        .client-card-premium {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 102, 41, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .client-card-premium::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--orange), transparent);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .client-card-premium:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(255, 102, 41, 0.3);
+            box-shadow: 0 20px 40px rgba(255, 102, 41, 0.08);
+            background: #fff;
+        }
+
+        .client-card-premium:hover::before {
+            transform: scaleX(1);
+        }
+
+        .client-logo {
+            width: 120px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            filter: grayscale(100%) opacity(0.7);
+        }
+
+        .client-card-premium:hover .client-logo {
+            transform: scale(1.1);
+            filter: grayscale(0%) opacity(1);
+        }
+
+        .client-name {
+            font-family: var(--font-primary);
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--navy);
+            text-align: center;
+        }
+        
+        .client-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255,102,41,0.1);
+            color: var(--orange);
+            font-size: 10px;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+</style>
 </head>
 
 <body>
@@ -2224,9 +2309,8 @@
         <div class="features-body">
             <div class="container">
                 <div class="section-header reveal">
-                    <h2 class="section-title">Inside <span>Admission Turkey EdTech</span></h2>
-                    <p class="section-desc">Everything you need to scale your student recruitment business, integrated
-                        into one powerful platform.</p>
+                    <h2 class="section-title">Inside the <span>Client Partner Portal</span></h2>
+                    <p class="section-desc">Our robust Partner Portal is actively used by leading clients like <strong>United Education</strong>, <strong>Ask Uni</strong>, and <strong>Alibaba Academy</strong> to seamlessly manage admissions and scale their recruitment operations.</p>
                 </div>
                 <div class="features-grid">
                     <div class="feature-card reveal reveal-delay-1" id="feature-tracking">
@@ -2438,76 +2522,93 @@
      CLIENTS
 ============================================ -->
     
-    <section id="clients" aria-label="Our Clients" style="padding: 80px 0; background: var(--off-white);">
+    
+    <section id="clients" aria-label="Our Clients" style="padding: 100px 0; background: var(--off-white); position: relative; overflow: hidden;">
+        <!-- Background decorative elements -->
+        <div style="position:absolute; top:-100px; right:-100px; width:400px; height:400px; background:radial-gradient(circle, rgba(255,102,41,0.05) 0%, transparent 70%); border-radius:50%; pointer-events:none;"></div>
+        <div style="position:absolute; bottom:-100px; left:-100px; width:500px; height:500px; background:radial-gradient(circle, rgba(2,35,74,0.03) 0%, transparent 70%); border-radius:50%; pointer-events:none;"></div>
+
         <div class="container">
             <div class="section-header reveal">
                 <div class="section-tag">
-                    <i class="fas fa-users" style="font-size:10px"></i> Trusted By
+                    <i class="fas fa-handshake" style="font-size:10px; animation: pulse-dot 2s infinite;"></i> Valued Partners
                 </div>
-                <h2 class="section-title">Our <span>Clients</span></h2>
+                <h2 class="section-title">Trusted by <span>Industry Leaders</span></h2>
+                <p class="section-desc">Our dedicated client portal empowers these leading institutions to streamline their global admissions and maximize efficiency.</p>
             </div>
-            <div class="uni-grid">
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px;">
                 
-                <!-- Istanbul Topkapi University -->
-                <div class="uni-card reveal reveal-delay-1">
-                    <div class="uni-logo-wrap">
-                        <img src="https://www.topkapi.edu.tr/resources/files/logo_tr.jpg" alt="Topkapi University Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="uni-logo-placeholder" style="background:linear-gradient(135deg,#8a1328,#6b0e1e);display:none">TU</div>
-                    </div>
-                    <div class="uni-name" style="text-align:center;">Topkapi University</div>
+                <!-- United Education -->
+                <div class="client-card-premium reveal reveal-delay-1">
+                    <div class="client-badge">Portal User</div>
+                    <img src="assets/logo_united.jpg" alt="United Education" class="client-logo">
+                    <div class="client-name">United Education</div>
                 </div>
 
-                <!-- Istanbul Gelisim University -->
-                <div class="uni-card reveal reveal-delay-2">
-                    <div class="uni-logo-wrap">
-                        <img src="assets/logo_gelisim.png" alt="Gelisim University Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="uni-logo-placeholder" style="background:linear-gradient(135deg,#059669,#047857);display:none">IGU</div>
-                    </div>
-                    <div class="uni-name" style="text-align:center;">Gelisim University</div>
+                <!-- Ask Uni -->
+                <div class="client-card-premium reveal reveal-delay-2">
+                    <div class="client-badge">Portal User</div>
+                    <img src="assets/logo_askuni.jpg" alt="Ask Uni" class="client-logo">
+                    <div class="client-name">Ask Uni</div>
                 </div>
 
-                <!-- Istanbul Aydin University -->
-                <div class="uni-card reveal reveal-delay-3">
-                    <div class="uni-logo-wrap">
-                        <img src="assets/logo_aydin.png" alt="Aydin University Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="uni-logo-placeholder" style="background:linear-gradient(135deg,#E30A17,#B30812);display:none">IAU</div>
-                    </div>
-                    <div class="uni-name" style="text-align:center;">Aydin University</div>
+                <!-- Alibaba Academy -->
+                <div class="client-card-premium reveal reveal-delay-3">
+                    <div class="client-badge">Portal User</div>
+                    <img src="assets/logo_alibaba.jpg" alt="Alibaba Academy" class="client-logo">
+                    <div class="client-name">Alibaba Academy</div>
+                </div>
+
+                <!-- Topkapi University -->
+                <div class="client-card-premium reveal reveal-delay-4">
+                    <img src="https://www.topkapi.edu.tr/resources/files/logo_tr.jpg" alt="Topkapi University" class="client-logo" onerror="this.src='assets/istanbul_bg.png'">
+                    <div class="client-name">Topkapi University</div>
+                </div>
+
+                <!-- Gelisim University -->
+                <div class="client-card-premium reveal reveal-delay-1">
+                    <img src="assets/logo_gelisim.png" alt="Gelisim University" class="client-logo">
+                    <div class="client-name">Gelisim University</div>
+                </div>
+
+                <!-- Aydin University -->
+                <div class="client-card-premium reveal reveal-delay-2">
+                    <img src="assets/logo_aydin.png" alt="Aydin University" class="client-logo">
+                    <div class="client-name">Aydin University</div>
                 </div>
 
                 <!-- ISTUN -->
-                <div class="uni-card reveal reveal-delay-1">
-                    <div class="uni-logo-wrap">
-                        <img src="assets/logo_istun.png" alt="ISTUN Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="uni-logo-placeholder" style="background:linear-gradient(135deg,#d8232a,#a5181e);display:none">ISTUN</div>
-                    </div>
-                    <div class="uni-name" style="text-align:center;">ISTUN</div>
+                <div class="client-card-premium reveal reveal-delay-3">
+                    <img src="assets/logo_istun.png" alt="ISTUN" class="client-logo">
+                    <div class="client-name">ISTUN</div>
                 </div>
 
                 <!-- Okan University -->
-                <div class="uni-card reveal reveal-delay-2">
-                    <div class="uni-logo-wrap">
-                        <img src="https://www.okan.edu.tr/theme/img/logo.svg" alt="Okan University Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="uni-logo-placeholder" style="background:linear-gradient(135deg,#144B8E,#0d3a70);display:none">OU</div>
-                    </div>
-                    <div class="uni-name" style="text-align:center;">Okan University</div>
+                <div class="client-card-premium reveal reveal-delay-4">
+                    <img src="https://www.okan.edu.tr/theme/img/logo.svg" alt="Okan University" class="client-logo">
+                    <div class="client-name">Okan University</div>
                 </div>
 
-                <div class="uni-card reveal reveal-delay-3">
-                    <div class="uni-name" style="text-align:center; padding-top:20px;">Hightech Prep</div>
+            </div>
+            
+            <div style="margin-top: 50px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px;">
+                <div class="client-card-premium reveal" style="padding: 20px;">
+                    <div class="client-name">Hightech Prep</div>
                 </div>
-                <div class="uni-card reveal reveal-delay-1">
-                    <div class="uni-name" style="text-align:center; padding-top:20px;">Tecrix College</div>
+                <div class="client-card-premium reveal reveal-delay-1" style="padding: 20px;">
+                    <div class="client-name">Tecrix College</div>
                 </div>
-                <div class="uni-card reveal reveal-delay-2">
-                    <div class="uni-name" style="text-align:center; padding-top:20px;">Navigate360</div>
+                <div class="client-card-premium reveal reveal-delay-2" style="padding: 20px;">
+                    <div class="client-name">Navigate360</div>
                 </div>
-                <div class="uni-card reveal reveal-delay-3">
-                    <div class="uni-name" style="text-align:center; padding-top:20px;">VIG</div>
+                <div class="client-card-premium reveal reveal-delay-3" style="padding: 20px;">
+                    <div class="client-name">VIG</div>
                 </div>
             </div>
         </div>
     </section>
+
 
 
     <!-- ============================================
