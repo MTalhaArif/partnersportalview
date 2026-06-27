@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Partners Portal TR | Exclusive Agent Dashboard for Turkish Universities</title>
-    <meta name="description" content="Partners Portal TR — Your all-in-one centralized dashboard to manage student applications, track commissions, and collaborate directly with top universities in Turkiye. Join 200+ partner universities.">
-    <meta property="og:title" content="Partners Portal TR | Agent Dashboard">
-    <meta property="og:description" content="Empower your education agency with real-time application tracking, commission management, and direct access to 200+ Turkish universities.">
+    <title>Admission Turkey EdTech | SAAS Company</title>
+    <meta name="description"
+        content="Admission Turkey EdTech — Leading SAAS Company to manage student applications, track commissions, and collaborate directly with top universities in Turkiye. Join 200+ partner universities.">
+    <meta property="og:title" content="Admission Turkey EdTech | SAAS Company">
+    <meta property="og:description"
+        content="Empower your education agency with real-time application tracking, commission management, and direct access to 200+ Turkish universities.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.partnersportaltr.com/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         /* ============================================
@@ -42,10 +47,10 @@
             --radius-lg: 20px;
             --radius-xl: 28px;
             --radius-full: 9999px;
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
-            --shadow-md: 0 4px 24px rgba(0,0,0,0.10);
-            --shadow-lg: 0 8px 40px rgba(0,0,0,0.16);
-            --shadow-xl: 0 16px 60px rgba(0,0,0,0.22);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.10);
+            --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.16);
+            --shadow-xl: 0 16px 60px rgba(0, 0, 0, 0.22);
             --shadow-orange: 0 8px 28px rgba(255, 102, 41, 0.38);
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -53,1190 +58,2643 @@
         /* ============================================
            RESET & BASE
         ============================================ */
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-        body { font-family: var(--font-body); background: var(--off-white); color: var(--navy); overflow-x: hidden; }
-        img { max-width: 100%; height: auto; display: block; }
-        a { text-decoration: none; color: inherit; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px); }
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--off-white);
+            color: var(--navy);
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 clamp(16px, 4vw, 32px);
+        }
 
         /* ============================================
            BUTTONS
         ============================================ */
         .btn-primary {
-            display: inline-flex; align-items: center; gap: 10px;
-            background: var(--orange); color: var(--white);
-            font-family: var(--font-primary); font-size: 15px; font-weight: 700;
-            padding: 14px 32px; border-radius: var(--radius-md); border: 2px solid transparent;
-            cursor: pointer; transition: var(--transition); box-shadow: var(--shadow-orange);
-            position: relative; overflow: hidden; white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--orange);
+            color: var(--white);
+            font-family: var(--font-primary);
+            font-size: 15px;
+            font-weight: 700;
+            padding: 14px 32px;
+            border-radius: var(--radius-md);
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow-orange);
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
         }
+
         .btn-primary::before {
-            content: ''; position: absolute; inset: 0;
-            background: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, transparent 60%);
-            opacity: 0; transition: var(--transition);
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, transparent 60%);
+            opacity: 0;
+            transition: var(--transition);
         }
-        .btn-primary i { transition: transform 0.3s ease; }
-        .btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); box-shadow: 0 12px 36px rgba(255,102,41,0.5); }
-        .btn-primary:hover::before { opacity: 1; }
-        .btn-primary:hover i { transform: translateX(5px); }
+
+        .btn-primary i {
+            transition: transform 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: var(--orange-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 36px rgba(255, 102, 41, 0.5);
+        }
+
+        .btn-primary:hover::before {
+            opacity: 1;
+        }
+
+        .btn-primary:hover i {
+            transform: translateX(5px);
+        }
 
         .btn-outline-orange {
-            display: inline-flex; align-items: center; gap: 10px;
-            background: transparent; color: var(--white);
-            font-family: var(--font-primary); font-size: 15px; font-weight: 600;
-            padding: 13px 30px; border-radius: var(--radius-md); border: 2px solid rgba(255,102,41,0.6);
-            cursor: pointer; transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: var(--white);
+            font-family: var(--font-primary);
+            font-size: 15px;
+            font-weight: 600;
+            padding: 13px 30px;
+            border-radius: var(--radius-md);
+            border: 2px solid rgba(255, 102, 41, 0.6);
+            cursor: pointer;
+            transition: var(--transition);
         }
-        .btn-outline-orange:hover { background: rgba(255,102,41,0.12); border-color: var(--orange); transform: translateY(-2px); }
+
+        .btn-outline-orange:hover {
+            background: rgba(255, 102, 41, 0.12);
+            border-color: var(--orange);
+            transform: translateY(-2px);
+        }
 
         .btn-outline-white {
-            display: inline-flex; align-items: center; gap: 10px;
-            background: rgba(255,255,255,0.08); color: var(--white);
-            font-family: var(--font-primary); font-size: 15px; font-weight: 600;
-            padding: 13px 30px; border-radius: var(--radius-md); border: 2px solid rgba(255,255,255,0.25);
-            cursor: pointer; transition: var(--transition); backdrop-filter: blur(8px);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--white);
+            font-family: var(--font-primary);
+            font-size: 15px;
+            font-weight: 600;
+            padding: 13px 30px;
+            border-radius: var(--radius-md);
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            cursor: pointer;
+            transition: var(--transition);
+            backdrop-filter: blur(8px);
         }
-        .btn-outline-white:hover { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.5); transform: translateY(-2px); }
+
+        .btn-outline-white:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
 
         /* ============================================
            SECTION TAGS
         ============================================ */
         .section-tag {
-            display: inline-flex; align-items: center; gap: 8px;
-            background: rgba(255, 102, 41, 0.08); border: 1px solid rgba(255, 102, 41, 0.22);
-            color: var(--orange); font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
-            text-transform: uppercase; padding: 6px 16px; border-radius: var(--radius-full); margin-bottom: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 102, 41, 0.08);
+            border: 1px solid rgba(255, 102, 41, 0.22);
+            color: var(--orange);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: var(--radius-full);
+            margin-bottom: 20px;
         }
+
         .section-tag-navy {
-            background: rgba(2, 35, 74, 0.08); border-color: rgba(2, 35, 74, 0.2); color: var(--navy);
+            background: rgba(2, 35, 74, 0.08);
+            border-color: rgba(2, 35, 74, 0.2);
+            color: var(--navy);
         }
+
         .section-tag-white {
-            background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.25); color: rgba(255,255,255,0.9);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.25);
+            color: rgba(255, 255, 255, 0.9);
         }
 
         /* ============================================
            TYPOGRAPHY
         ============================================ */
         .section-title {
-            font-family: var(--font-primary); font-size: clamp(28px, 3.5vw, 42px); font-weight: 800;
-            color: var(--navy); line-height: 1.15; letter-spacing: -0.8px; margin-bottom: 16px;
+            font-family: var(--font-primary);
+            font-size: clamp(28px, 3.5vw, 42px);
+            font-weight: 800;
+            color: var(--navy);
+            line-height: 1.15;
+            letter-spacing: -0.8px;
+            margin-bottom: 16px;
         }
-        .section-title span { color: var(--orange); }
-        .section-desc { font-size: 17px; color: var(--gray-500); max-width: 560px; margin: 0 auto; line-height: 1.7; }
-        .section-header { text-align: center; margin-bottom: 56px; }
+
+        .section-title span {
+            color: var(--orange);
+        }
+
+        .section-desc {
+            font-size: 17px;
+            color: var(--gray-500);
+            max-width: 560px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
 
         /* ============================================
            SCROLLBAR
         ============================================ */
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: var(--navy); }
-        ::-webkit-scrollbar-thumb { background: var(--orange); border-radius: 3px; }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--navy);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--orange);
+            border-radius: 3px;
+        }
 
         /* ============================================
            ANIMATIONS
         ============================================ */
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes fadeInRight { from { opacity: 0; transform: translateX(32px); } to { opacity: 1; transform: translateX(0); } }
-        @keyframes float-orb { 0%, 100% { transform: translate(0,0) scale(1); } 33% { transform: translate(18px,-18px) scale(1.04); } 66% { transform: translate(-12px,10px) scale(0.96); } }
-        @keyframes float-badge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-        @keyframes scroll-strip { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        @keyframes pulse-dot { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.4); opacity: 0.7; } }
-        @keyframes counter-pulse { 0% { transform: scale(1); } 50% { transform: scale(1.04); } 100% { transform: scale(1); } }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
 
-        .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
-        .reveal.visible { opacity: 1; transform: translateY(0); }
-        .reveal-delay-1 { transition-delay: 0.1s; }
-        .reveal-delay-2 { transition-delay: 0.2s; }
-        .reveal-delay-3 { transition-delay: 0.3s; }
-        .reveal-delay-4 { transition-delay: 0.4s; }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(32px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes float-orb {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            33% {
+                transform: translate(18px, -18px) scale(1.04);
+            }
+
+            66% {
+                transform: translate(-12px, 10px) scale(0.96);
+            }
+        }
+
+        @keyframes float-badge {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes scroll-strip {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes pulse-dot {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.4);
+                opacity: 0.7;
+            }
+        }
+
+        @keyframes counter-pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.04);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .reveal-delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .reveal-delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        .reveal-delay-4 {
+            transition-delay: 0.4s;
+        }
 
         /* ============================================
            NAVBAR
         ============================================ */
         #navbar {
-            position: fixed; top: 0; left: 0; right: 0; z-index: 1000; transition: var(--transition);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: var(--transition);
         }
+
         #navbar.scrolled {
-            background: rgba(2, 35, 74, 0.97); backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255,255,255,0.06); box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+            background: rgba(2, 35, 74, 0.97);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
         }
+
         .nav-inner {
-            display: flex; align-items: center; justify-content: space-between;
-            padding: 18px clamp(16px, 4vw, 32px); max-width: 1200px; margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px clamp(16px, 4vw, 32px);
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        .nav-logo { font-family: var(--font-primary); font-size: 20px; font-weight: 800; color: var(--white); letter-spacing: -0.3px; display: flex; align-items: center; gap: 8px; }
-        .nav-logo span { color: var(--orange); }
-        .nav-logo .dot { width: 6px; height: 6px; background: var(--orange); border-radius: 50%; animation: pulse-dot 2s ease-in-out infinite; }
 
-        .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
-        .nav-links a { color: rgba(255,255,255,0.72); font-size: 14px; font-weight: 500; transition: var(--transition); position: relative; }
-        .nav-links a::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 2px; background: var(--orange); border-radius: 2px; transition: var(--transition); }
-        .nav-links a:hover { color: var(--white); }
-        .nav-links a:hover::after { width: 100%; }
+        .nav-logo {
+            font-family: var(--font-primary);
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--white);
+            letter-spacing: -0.3px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-        .nav-actions { display: flex; align-items: center; gap: 12px; }
-        .nav-contact-link { color: rgba(255,255,255,0.6); font-size: 13px; font-weight: 500; transition: var(--transition); display: none; }
-        .nav-contact-link:hover { color: var(--white); }
-        @media (min-width: 1024px) { .nav-contact-link { display: block; } }
+        .nav-logo span {
+            color: var(--orange);
+        }
+
+        .nav-logo .dot {
+            width: 6px;
+            height: 6px;
+            background: var(--orange);
+            border-radius: 50%;
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.72);
+            font-size: 14px;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--orange);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-contact-link {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 13px;
+            font-weight: 500;
+            transition: var(--transition);
+            display: none;
+        }
+
+        .nav-contact-link:hover {
+            color: var(--white);
+        }
+
+        @media (min-width: 1024px) {
+            .nav-contact-link {
+                display: block;
+            }
+        }
 
         .nav-login-btn {
-            display: inline-flex; align-items: center; gap: 8px;
-            background: var(--orange); color: var(--white); font-family: var(--font-primary);
-            font-size: 14px; font-weight: 700; padding: 9px 20px; border-radius: var(--radius-sm);
-            transition: var(--transition); box-shadow: 0 4px 14px rgba(255,102,41,0.4); white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--orange);
+            color: var(--white);
+            font-family: var(--font-primary);
+            font-size: 14px;
+            font-weight: 700;
+            padding: 9px 20px;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+            box-shadow: 0 4px 14px rgba(255, 102, 41, 0.4);
+            white-space: nowrap;
         }
-        .nav-login-btn:hover { background: var(--orange-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(255,102,41,0.5); }
 
-        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; border-radius: 6px; transition: var(--transition); }
-        .hamburger:hover { background: rgba(255,255,255,0.08); }
-        .hamburger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; transition: var(--transition); }
+        .nav-login-btn:hover {
+            background: var(--orange-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(255, 102, 41, 0.5);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 6px;
+            border-radius: 6px;
+            transition: var(--transition);
+        }
+
+        .hamburger:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .hamburger span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--white);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
 
         /* Mobile Menu */
         .mobile-menu {
-            display: none; position: fixed; inset: 0; z-index: 999;
-            background: rgba(2, 35, 74, 0.98); backdrop-filter: blur(20px);
-            flex-direction: column; align-items: center; justify-content: center; gap: 28px;
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 999;
+            background: rgba(2, 35, 74, 0.98);
+            backdrop-filter: blur(20px);
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
         }
-        .mobile-menu.open { display: flex; }
-        .mobile-menu a { font-family: var(--font-primary); font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.82); transition: var(--transition); }
-        .mobile-menu a:hover { color: var(--orange); }
-        .mobile-menu .mob-login { background: var(--orange); color: var(--white); padding: 14px 40px; border-radius: var(--radius-md); font-size: 18px; box-shadow: var(--shadow-orange); }
-        .mobile-menu .mob-login:hover { background: var(--orange-dark); color: var(--white); }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            font-family: var(--font-primary);
+            font-size: 22px;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.82);
+            transition: var(--transition);
+        }
+
+        .mobile-menu a:hover {
+            color: var(--orange);
+        }
+
+        .mobile-menu .mob-login {
+            background: var(--orange);
+            color: var(--white);
+            padding: 14px 40px;
+            border-radius: var(--radius-md);
+            font-size: 18px;
+            box-shadow: var(--shadow-orange);
+        }
+
+        .mobile-menu .mob-login:hover {
+            background: var(--orange-dark);
+            color: var(--white);
+        }
+
         .mobile-close {
-            position: absolute; top: 22px; right: 22px; width: 44px; height: 44px;
-            border-radius: 50%; background: rgba(255,255,255,0.07); border: none; cursor: pointer;
-            display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 18px; transition: var(--transition);
+            position: absolute;
+            top: 22px;
+            right: 22px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.07);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 18px;
+            transition: var(--transition);
         }
-        .mobile-close:hover { background: var(--orange); }
+
+        .mobile-close:hover {
+            background: var(--orange);
+        }
 
         /* ============================================
            HERO
         ============================================ */
         #hero {
-            position: relative; min-height: 100vh; display: flex; align-items: center;
-            overflow: hidden; background: var(--navy);
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: var(--navy);
         }
+
         .hero-bg {
-            position: absolute; inset: 0;
+            position: absolute;
+            inset: 0;
             background:
-                radial-gradient(ellipse 80% 60% at 50% -10%, rgba(255,102,41,0.15) 0%, transparent 65%),
-                radial-gradient(ellipse 60% 80% at 85% 60%, rgba(255,102,41,0.06) 0%, transparent 60%),
-                linear-gradient(150deg, rgba(2,35,74,0.85) 0%, rgba(4,30,66,0.92) 40%, rgba(6,24,48,0.98) 100%),
+                radial-gradient(ellipse 80% 60% at 50% -10%, rgba(255, 102, 41, 0.15) 0%, transparent 65%),
+                radial-gradient(ellipse 60% 80% at 85% 60%, rgba(255, 102, 41, 0.06) 0%, transparent 60%),
+                linear-gradient(150deg, rgba(2, 35, 74, 0.85) 0%, rgba(4, 30, 66, 0.92) 40%, rgba(6, 24, 48, 0.98) 100%),
                 url('assets/istanbul_bg.png') center/cover no-repeat;
             background-attachment: fixed;
         }
+
         .hero-grid {
-            position: absolute; inset: 0;
-            background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
             background-size: 56px 56px;
-            mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.55) 0%, transparent 75%);
+            mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.55) 0%, transparent 75%);
         }
-        .hero-orb { position: absolute; border-radius: 50%; filter: blur(80px); animation: float-orb 9s ease-in-out infinite; pointer-events: none; }
-        .hero-orb-1 { width: 380px; height: 380px; background: rgba(255,102,41,0.10); top: -80px; right: -80px; }
-        .hero-orb-2 { width: 280px; height: 280px; background: rgba(2,35,74,0.9); bottom: 0; left: -60px; animation-delay: -4s; }
-        .hero-orb-3 { width: 200px; height: 200px; background: rgba(255,102,41,0.07); top: 45%; left: 45%; animation-delay: -2s; }
+
+        .hero-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: float-orb 9s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .hero-orb-1 {
+            width: 380px;
+            height: 380px;
+            background: rgba(255, 102, 41, 0.10);
+            top: -80px;
+            right: -80px;
+        }
+
+        .hero-orb-2 {
+            width: 280px;
+            height: 280px;
+            background: rgba(2, 35, 74, 0.9);
+            bottom: 0;
+            left: -60px;
+            animation-delay: -4s;
+        }
+
+        .hero-orb-3 {
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 102, 41, 0.07);
+            top: 45%;
+            left: 45%;
+            animation-delay: -2s;
+        }
 
         .hero-content {
-            position: relative; z-index: 10; width: 100%;
+            position: relative;
+            z-index: 10;
+            width: 100%;
             padding: clamp(100px, 14vw, 130px) clamp(16px, 4vw, 32px) clamp(80px, 10vw, 100px);
-            max-width: 1200px; margin: 0 auto;
-            display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            align-items: center;
         }
 
         .hero-badge {
-            display: inline-flex; align-items: center; gap: 8px;
-            background: rgba(255,102,41,0.12); border: 1px solid rgba(255,102,41,0.32); color: #ff9a78;
-            font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
-            padding: 7px 16px; border-radius: var(--radius-full); margin-bottom: 22px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 102, 41, 0.12);
+            border: 1px solid rgba(255, 102, 41, 0.32);
+            color: #ff9a78;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 7px 16px;
+            border-radius: var(--radius-full);
+            margin-bottom: 22px;
             animation: fadeInUp 0.6s ease both;
         }
-        .hero-badge .dot { width: 6px; height: 6px; background: var(--orange); border-radius: 50%; animation: pulse-dot 1.5s ease-in-out infinite; }
+
+        .hero-badge .dot {
+            width: 6px;
+            height: 6px;
+            background: var(--orange);
+            border-radius: 50%;
+            animation: pulse-dot 1.5s ease-in-out infinite;
+        }
 
         .hero-title {
-            font-family: var(--font-primary); font-size: clamp(36px, 4.5vw, 58px); font-weight: 900;
-            color: var(--white); line-height: 1.08; letter-spacing: -1.2px; margin-bottom: 22px;
+            font-family: var(--font-primary);
+            font-size: clamp(36px, 4.5vw, 58px);
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.08;
+            letter-spacing: -1.2px;
+            margin-bottom: 22px;
             animation: fadeInUp 0.6s ease 0.1s both;
         }
-        .hero-title .highlight { color: var(--orange); position: relative; display: inline-block; }
+
+        .hero-title .highlight {
+            color: var(--orange);
+            position: relative;
+            display: inline-block;
+        }
+
         .hero-title .highlight::after {
-            content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
-            background: linear-gradient(90deg, var(--orange), transparent); border-radius: 2px;
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--orange), transparent);
+            border-radius: 2px;
         }
 
         .hero-subtitle {
-            font-size: clamp(15px, 2vw, 18px); color: rgba(255,255,255,0.62); line-height: 1.72;
-            margin-bottom: 36px; max-width: 480px; animation: fadeInUp 0.6s ease 0.2s both;
+            font-size: clamp(15px, 2vw, 18px);
+            color: rgba(255, 255, 255, 0.62);
+            line-height: 1.72;
+            margin-bottom: 36px;
+            max-width: 480px;
+            animation: fadeInUp 0.6s ease 0.2s both;
         }
-        .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; animation: fadeInUp 0.6s ease 0.3s both; }
+
+        .hero-ctas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            animation: fadeInUp 0.6s ease 0.3s both;
+        }
 
         .hero-stats-row {
-            display: flex; flex-wrap: wrap; gap: 28px; margin-top: 48px; padding-top: 28px;
-            border-top: 1px solid rgba(255,255,255,0.08); animation: fadeInUp 0.6s ease 0.4s both;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            margin-top: 48px;
+            padding-top: 28px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            animation: fadeInUp 0.6s ease 0.4s both;
         }
-        .hero-stat-num { font-family: var(--font-primary); font-size: 26px; font-weight: 800; color: var(--white); line-height: 1; }
-        .hero-stat-num span { color: var(--orange); }
-        .hero-stat-label { font-size: 11px; color: rgba(255,255,255,0.42); font-weight: 600; margin-top: 3px; text-transform: uppercase; letter-spacing: 0.8px; }
+
+        .hero-stat-num {
+            font-family: var(--font-primary);
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .hero-stat-num span {
+            color: var(--orange);
+        }
+
+        .hero-stat-label {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.42);
+            font-weight: 600;
+            margin-top: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
 
         /* Portal card preview */
-        .hero-visual { position: relative; animation: fadeInRight 0.8s ease 0.2s both; }
-        .portal-card {
-            background: rgba(255,255,255,0.042); backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,0.09); border-radius: var(--radius-xl);
-            padding: 26px; box-shadow: 0 20px 60px rgba(0,0,0,0.38), inset 0 1px 0 rgba(255,255,255,0.07);
+        .hero-visual {
+            position: relative;
+            animation: fadeInRight 0.8s ease 0.2s both;
         }
-        .portal-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
-        .portal-card-dots { display: flex; gap: 5px; }
-        .portal-card-dots span { width: 9px; height: 9px; border-radius: 50%; }
-        .portal-card-dots span:nth-child(1) { background: #FF5F56; }
-        .portal-card-dots span:nth-child(2) { background: #FFBE2E; }
-        .portal-card-dots span:nth-child(3) { background: #27C93F; }
-        .portal-card-title { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.45); flex: 1; text-align: center; }
 
-        .portal-metric-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
-        .portal-metric { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); border-radius: var(--radius-md); padding: 14px; }
-        .portal-metric.accent { background: rgba(255,102,41,0.1); border-color: rgba(255,102,41,0.18); }
-        .portal-metric-label { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.38); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 7px; }
-        .portal-metric-value { font-family: var(--font-primary); font-size: 24px; font-weight: 800; color: var(--white); line-height: 1; }
-        .portal-metric.accent .portal-metric-value { color: #ffac8c; }
-        .portal-metric-change { display: inline-flex; align-items: center; gap: 3px; font-size: 10px; font-weight: 600; color: #4ADE80; margin-top: 5px; }
+        .portal-card {
+            background: rgba(255, 255, 255, 0.042);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: var(--radius-xl);
+            padding: 26px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+        }
 
-        .portal-app-list { display: flex; flex-direction: column; gap: 9px; }
-        .portal-app-item { display: flex; align-items: center; gap: 10px; padding: 11px 12px; background: rgba(255,255,255,0.035); border: 1px solid rgba(255,255,255,0.055); border-radius: var(--radius-sm); transition: var(--transition); }
-        .portal-app-item:hover { background: rgba(255,255,255,0.065); }
-        .app-avatar { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: var(--white); flex-shrink: 0; }
-        .app-info { flex: 1; min-width: 0; }
-        .app-name { font-size: 12px; font-weight: 600; color: var(--white); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .app-uni { font-size: 10px; color: rgba(255,255,255,0.38); margin-top: 1px; }
-        .app-status { font-size: 10px; font-weight: 600; padding: 3px 9px; border-radius: var(--radius-full); flex-shrink: 0; }
-        .status-accepted { background: rgba(74,222,128,0.14); color: #4ADE80; }
-        .status-review { background: rgba(251,191,36,0.14); color: #FBBF24; }
-        .status-pending { background: rgba(148,163,184,0.10); color: #94A3B8; }
+        .portal-card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .portal-card-dots {
+            display: flex;
+            gap: 5px;
+        }
+
+        .portal-card-dots span {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+        }
+
+        .portal-card-dots span:nth-child(1) {
+            background: #FF5F56;
+        }
+
+        .portal-card-dots span:nth-child(2) {
+            background: #FFBE2E;
+        }
+
+        .portal-card-dots span:nth-child(3) {
+            background: #27C93F;
+        }
+
+        .portal-card-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.45);
+            flex: 1;
+            text-align: center;
+        }
+
+        .portal-metric-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        .portal-metric {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: var(--radius-md);
+            padding: 14px;
+        }
+
+        .portal-metric.accent {
+            background: rgba(255, 102, 41, 0.1);
+            border-color: rgba(255, 102, 41, 0.18);
+        }
+
+        .portal-metric-label {
+            font-size: 10px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.38);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 7px;
+        }
+
+        .portal-metric-value {
+            font-family: var(--font-primary);
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .portal-metric.accent .portal-metric-value {
+            color: #ffac8c;
+        }
+
+        .portal-metric-change {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            font-size: 10px;
+            font-weight: 600;
+            color: #4ADE80;
+            margin-top: 5px;
+        }
+
+        .portal-app-list {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+        }
+
+        .portal-app-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 11px 12px;
+            background: rgba(255, 255, 255, 0.035);
+            border: 1px solid rgba(255, 255, 255, 0.055);
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+        }
+
+        .portal-app-item:hover {
+            background: rgba(255, 255, 255, 0.065);
+        }
+
+        .app-avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        .app-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .app-name {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--white);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .app-uni {
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.38);
+            margin-top: 1px;
+        }
+
+        .app-status {
+            font-size: 10px;
+            font-weight: 600;
+            padding: 3px 9px;
+            border-radius: var(--radius-full);
+            flex-shrink: 0;
+        }
+
+        .status-accepted {
+            background: rgba(74, 222, 128, 0.14);
+            color: #4ADE80;
+        }
+
+        .status-review {
+            background: rgba(251, 191, 36, 0.14);
+            color: #FBBF24;
+        }
+
+        .status-pending {
+            background: rgba(148, 163, 184, 0.10);
+            color: #94A3B8;
+        }
 
         .floating-badge {
-            position: absolute; background: var(--white); border-radius: var(--radius-md);
-            padding: 11px 14px; box-shadow: var(--shadow-xl); display: flex; align-items: center; gap: 10px; z-index: 5;
+            position: absolute;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 11px 14px;
+            box-shadow: var(--shadow-xl);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 5;
         }
-        .floating-badge-1 { bottom: -12px; right: -18px; animation: float-badge 3s ease-in-out infinite; }
-        .floating-badge-2 { top: 16px; left: -28px; animation: float-badge 3.2s ease-in-out infinite; animation-delay: -1.5s; }
-        .float-badge-icon { width: 34px; height: 34px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 16px; }
-        .float-badge-label { font-size: 10px; color: var(--gray-500); font-weight: 500; }
-        .float-badge-value { font-family: var(--font-primary); font-size: 14px; font-weight: 800; color: var(--navy); }
+
+        .floating-badge-1 {
+            bottom: -12px;
+            right: -18px;
+            animation: float-badge 3s ease-in-out infinite;
+        }
+
+        .floating-badge-2 {
+            top: 16px;
+            left: -28px;
+            animation: float-badge 3.2s ease-in-out infinite;
+            animation-delay: -1.5s;
+        }
+
+        .float-badge-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .float-badge-label {
+            font-size: 10px;
+            color: var(--gray-500);
+            font-weight: 500;
+        }
+
+        .float-badge-value {
+            font-family: var(--font-primary);
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--navy);
+        }
 
         /* ============================================
            FEATURES
         ============================================ */
-        .features-intro-band { background: linear-gradient(180deg, var(--navy) 0%, var(--white) 60px); padding-top: 56px; }
-        .features-intro-label { text-align: center; color: var(--orange); font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; padding-bottom: 10px; }
-        .features-body { background: var(--white); padding: 32px 0 96px; }
+        .features-intro-band {
+            background: linear-gradient(180deg, var(--navy) 0%, var(--white) 60px);
+            padding-top: 56px;
+        }
 
-        .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+        .features-intro-label {
+            text-align: center;
+            color: var(--orange);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            padding-bottom: 10px;
+        }
+
+        .features-body {
+            background: var(--white);
+            padding: 32px 0 96px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
         .feature-card {
-            position: relative; background: var(--white); border: 1px solid var(--gray-200);
-            border-radius: var(--radius-lg); padding: 34px; overflow: hidden; transition: var(--transition); cursor: default;
+            position: relative;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            padding: 34px;
+            overflow: hidden;
+            transition: var(--transition);
+            cursor: default;
         }
+
         .feature-card::before {
-            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-            background: linear-gradient(90deg, var(--orange), var(--orange-light)); transform: scaleX(0); transform-origin: left; transition: var(--transition);
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--orange), var(--orange-light));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
         }
-        .feature-card:hover { border-color: transparent; box-shadow: var(--shadow-lg); transform: translateY(-4px); }
-        .feature-card:hover::before { transform: scaleX(1); }
+
+        .feature-card:hover {
+            border-color: transparent;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
 
         .feature-icon-wrap {
-            width: 56px; height: 56px; background: rgba(255,102,41,0.07); border: 1px solid rgba(255,102,41,0.14);
-            border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center;
-            font-size: 22px; color: var(--orange); margin-bottom: 22px; transition: var(--transition);
+            width: 56px;
+            height: 56px;
+            background: rgba(255, 102, 41, 0.07);
+            border: 1px solid rgba(255, 102, 41, 0.14);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: var(--orange);
+            margin-bottom: 22px;
+            transition: var(--transition);
         }
-        .feature-card:hover .feature-icon-wrap { background: var(--orange); border-color: var(--orange); color: var(--white); transform: scale(1.1) rotate(-5deg); box-shadow: var(--shadow-orange); }
 
-        .feature-number { position: absolute; top: 26px; right: 30px; font-family: var(--font-primary); font-size: 62px; font-weight: 900; color: var(--gray-100); line-height: 1; transition: var(--transition); user-select: none; }
-        .feature-card:hover .feature-number { color: rgba(255,102,41,0.055); }
+        .feature-card:hover .feature-icon-wrap {
+            background: var(--orange);
+            border-color: var(--orange);
+            color: var(--white);
+            transform: scale(1.1) rotate(-5deg);
+            box-shadow: var(--shadow-orange);
+        }
 
-        .feature-title { font-family: var(--font-primary); font-size: 19px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
-        .feature-desc { font-size: 14px; color: var(--gray-500); line-height: 1.7; margin-bottom: 18px; }
-        .feature-bullets { list-style: none; display: flex; flex-direction: column; gap: 7px; }
-        .feature-bullets li { display: flex; align-items: flex-start; gap: 9px; font-size: 13px; color: #475569; }
-        .feature-bullets li i { color: var(--orange); font-size: 9px; margin-top: 5px; flex-shrink: 0; }
+        .feature-number {
+            position: absolute;
+            top: 26px;
+            right: 30px;
+            font-family: var(--font-primary);
+            font-size: 62px;
+            font-weight: 900;
+            color: var(--gray-100);
+            line-height: 1;
+            transition: var(--transition);
+            user-select: none;
+        }
+
+        .feature-card:hover .feature-number {
+            color: rgba(255, 102, 41, 0.055);
+        }
+
+        .feature-title {
+            font-family: var(--font-primary);
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+
+        .feature-desc {
+            font-size: 14px;
+            color: var(--gray-500);
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+        .feature-bullets {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .feature-bullets li {
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
+            font-size: 13px;
+            color: #475569;
+        }
+
+        .feature-bullets li i {
+            color: var(--orange);
+            font-size: 9px;
+            margin-top: 5px;
+            flex-shrink: 0;
+        }
 
         /* ============================================
            STATS
         ============================================ */
-        #stats { padding: 80px 0; background: var(--navy); position: relative; overflow: hidden; }
-        #stats::before {
-            content: ''; position: absolute; inset: 0;
-            background: radial-gradient(ellipse 60% 80% at 0% 50%, rgba(255,102,41,0.07) 0%, transparent 60%), radial-gradient(ellipse 60% 80% at 100% 50%, rgba(255,102,41,0.07) 0%, transparent 60%);
+        #stats {
+            padding: 80px 0;
+            background: var(--navy);
+            position: relative;
+            overflow: hidden;
         }
-        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; z-index: 1; }
-        .stat-item { text-align: center; padding: 44px 28px; position: relative; transition: var(--transition); z-index: 1; border: 1px solid transparent; }
-        .stat-item::after { content: ''; position: absolute; top: 25%; right: 0; width: 1px; height: 50%; background: rgba(255,255,255,0.07); transition: var(--transition); }
-        .stat-item:last-child::after { display: none; }
-        .stat-item:hover { background: rgba(255,255,255,0.04); transform: translateY(-8px); border-radius: var(--radius-lg); box-shadow: 0 16px 40px rgba(0,0,0,0.3); z-index: 2; border: 1px solid rgba(255,255,255,0.05); }
-        .stat-item:hover::after { opacity: 0; }
-        .stat-icon { width: 50px; height: 50px; border-radius: var(--radius-md); background: rgba(255,102,41,0.10); border: 1px solid rgba(255,102,41,0.18); display: flex; align-items: center; justify-content: center; font-size: 19px; color: var(--orange); margin: 0 auto 18px; }
-        .stat-number { font-family: var(--font-primary); font-size: clamp(34px, 4.5vw, 50px); font-weight: 900; color: var(--white); line-height: 1; margin-bottom: 8px; }
-        .stat-number .accent { color: var(--orange); }
-        .stat-label { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.42); text-transform: uppercase; letter-spacing: 1.5px; }
+
+        #stats::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 80% at 0% 50%, rgba(255, 102, 41, 0.07) 0%, transparent 60%), radial-gradient(ellipse 60% 80% at 100% 50%, rgba(255, 102, 41, 0.07) 0%, transparent 60%);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 44px 28px;
+            position: relative;
+            transition: var(--transition);
+            z-index: 1;
+            border: 1px solid transparent;
+        }
+
+        .stat-item::after {
+            content: '';
+            position: absolute;
+            top: 25%;
+            right: 0;
+            width: 1px;
+            height: 50%;
+            background: rgba(255, 255, 255, 0.07);
+            transition: var(--transition);
+        }
+
+        .stat-item:last-child::after {
+            display: none;
+        }
+
+        .stat-item:hover {
+            background: rgba(255, 255, 255, 0.04);
+            transform: translateY(-8px);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+            z-index: 2;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .stat-item:hover::after {
+            opacity: 0;
+        }
+
+        .stat-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: var(--radius-md);
+            background: rgba(255, 102, 41, 0.10);
+            border: 1px solid rgba(255, 102, 41, 0.18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 19px;
+            color: var(--orange);
+            margin: 0 auto 18px;
+        }
+
+        .stat-number {
+            font-family: var(--font-primary);
+            font-size: clamp(34px, 4.5vw, 50px);
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-number .accent {
+            color: var(--orange);
+        }
+
+        .stat-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.42);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
 
         /* ============================================
            UNIVERSITIES
         ============================================ */
-        #universities { padding: 96px 0; background: linear-gradient(180deg, var(--off-white) 0%, var(--white) 100%); position: relative; overflow: hidden; }
-        #universities::before {
-            content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-            width: 600px; height: 500px; background: radial-gradient(ellipse, rgba(255,102,41,0.035) 0%, transparent 70%); pointer-events: none;
+        #universities {
+            padding: 96px 0;
+            background: linear-gradient(180deg, var(--off-white) 0%, var(--white) 100%);
+            position: relative;
+            overflow: hidden;
         }
 
-        .uni-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+        #universities::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 500px;
+            background: radial-gradient(ellipse, rgba(255, 102, 41, 0.035) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .uni-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
         .uni-card {
-            background: var(--white); border: 1.5px solid var(--gray-200); border-radius: var(--radius-lg);
-            padding: 28px 22px; display: flex; flex-direction: column; align-items: flex-start;
-            transition: var(--transition); position: relative; overflow: hidden; cursor: default;
+            background: var(--white);
+            border: 1.5px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            padding: 28px 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            cursor: default;
         }
+
         .uni-card::after {
-            content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
-            background: linear-gradient(90deg, var(--orange), transparent); transform: scaleX(0); transform-origin: left; transition: var(--transition);
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--orange), transparent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
         }
-        .uni-card:hover { border-color: rgba(255,102,41,0.22); box-shadow: var(--shadow-md), 0 0 0 1px rgba(255,102,41,0.1); transform: translateY(-3px); }
-        .uni-card:hover::after { transform: scaleX(1); }
+
+        .uni-card:hover {
+            border-color: rgba(255, 102, 41, 0.22);
+            box-shadow: var(--shadow-md), 0 0 0 1px rgba(255, 102, 41, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .uni-card:hover::after {
+            transform: scaleX(1);
+        }
 
         .uni-logo-wrap {
-            height: 52px; display: flex; align-items: center; margin-bottom: 14px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 14px;
         }
-        .uni-logo-wrap img { max-height: 52px; max-width: 140px; width: auto; object-fit: contain; }
+
+        .uni-logo-wrap img {
+            max-height: 52px;
+            max-width: 140px;
+            width: auto;
+            object-fit: contain;
+        }
+
         .uni-logo-placeholder {
-            width: 46px; height: 46px; border-radius: var(--radius-sm); display: flex; align-items: center;
-            justify-content: center; font-family: var(--font-primary); font-size: 16px; font-weight: 900; color: var(--white);
+            width: 46px;
+            height: 46px;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-primary);
+            font-size: 16px;
+            font-weight: 900;
+            color: var(--white);
         }
-        .uni-name { font-family: var(--font-primary); font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 5px; line-height: 1.3; }
-        .uni-type { font-size: 11px; color: var(--gray-500); margin-bottom: 14px; }
-        .uni-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: auto; }
-        .uni-tag { font-size: 10px; font-weight: 600; padding: 3px 9px; border-radius: var(--radius-full); }
-        .tag-priority { background: rgba(255,102,41,0.08); color: var(--orange); border: 1px solid rgba(255,102,41,0.18); }
-        .tag-quota { background: rgba(74,222,128,0.07); color: #16A34A; border: 1px solid rgba(74,222,128,0.18); }
-        .tag-scholarship { background: rgba(251,191,36,0.09); color: #B45309; border: 1px solid rgba(251,191,36,0.24); }
+
+        .uni-name {
+            font-family: var(--font-primary);
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 5px;
+            line-height: 1.3;
+        }
+
+        .uni-type {
+            font-size: 11px;
+            color: var(--gray-500);
+            margin-bottom: 14px;
+        }
+
+        .uni-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: auto;
+        }
+
+        .uni-tag {
+            font-size: 10px;
+            font-weight: 600;
+            padding: 3px 9px;
+            border-radius: var(--radius-full);
+        }
+
+        .tag-priority {
+            background: rgba(255, 102, 41, 0.08);
+            color: var(--orange);
+            border: 1px solid rgba(255, 102, 41, 0.18);
+        }
+
+        .tag-quota {
+            background: rgba(74, 222, 128, 0.07);
+            color: #16A34A;
+            border: 1px solid rgba(74, 222, 128, 0.18);
+        }
+
+        .tag-scholarship {
+            background: rgba(251, 191, 36, 0.09);
+            color: #B45309;
+            border: 1px solid rgba(251, 191, 36, 0.24);
+        }
 
         /* University ticker strip */
-        .uni-strip-wrapper { overflow: hidden; margin-top: 44px; padding: 18px 0; position: relative; }
-        .uni-strip-wrapper::before, .uni-strip-wrapper::after { content: ''; position: absolute; top: 0; bottom: 0; width: 70px; z-index: 10; }
-        .uni-strip-wrapper::before { left: 0; background: linear-gradient(90deg, var(--off-white), transparent); }
-        .uni-strip-wrapper::after { right: 0; background: linear-gradient(-90deg, var(--off-white), transparent); }
-        .uni-strip { display: flex; gap: 20px; width: max-content; animation: scroll-strip 28s linear infinite; }
-        .uni-strip:hover { animation-play-state: paused; }
-        .strip-item { display: flex; align-items: center; gap: 9px; background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-sm); padding: 9px 16px; white-space: nowrap; font-size: 12px; font-weight: 600; color: var(--navy); }
-        .strip-item i { color: var(--orange); font-size: 11px; }
+        .uni-strip-wrapper {
+            overflow: hidden;
+            margin-top: 44px;
+            padding: 18px 0;
+            position: relative;
+        }
+
+        .uni-strip-wrapper::before,
+        .uni-strip-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 70px;
+            z-index: 10;
+        }
+
+        .uni-strip-wrapper::before {
+            left: 0;
+            background: linear-gradient(90deg, var(--off-white), transparent);
+        }
+
+        .uni-strip-wrapper::after {
+            right: 0;
+            background: linear-gradient(-90deg, var(--off-white), transparent);
+        }
+
+        .uni-strip {
+            display: flex;
+            gap: 20px;
+            width: max-content;
+            animation: scroll-strip 28s linear infinite;
+        }
+
+        .uni-strip:hover {
+            animation-play-state: paused;
+        }
+
+        .strip-item {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-sm);
+            padding: 9px 16px;
+            white-space: nowrap;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .strip-item i {
+            color: var(--orange);
+            font-size: 11px;
+        }
 
         /* ============================================
            HOW IT WORKS
         ============================================ */
-        #how-it-works { padding: 96px 0; background: var(--white); }
-        .steps-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; position: relative; }
+        #how-it-works {
+            padding: 96px 0;
+            background: var(--white);
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            position: relative;
+        }
+
         .steps-container::before {
-            content: ''; position: absolute; top: 40px; left: calc(16.66% + 18px); right: calc(16.66% + 18px);
-            height: 2px; background: linear-gradient(90deg, var(--orange) 0%, rgba(255,102,41,0.14) 50%, var(--orange) 100%); z-index: 0;
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: calc(16.66% + 18px);
+            right: calc(16.66% + 18px);
+            height: 2px;
+            background: linear-gradient(90deg, var(--orange) 0%, rgba(255, 102, 41, 0.14) 50%, var(--orange) 100%);
+            z-index: 0;
         }
-        .step-card { position: relative; text-align: center; padding: 28px 20px; z-index: 1; }
+
+        .step-card {
+            position: relative;
+            text-align: center;
+            padding: 28px 20px;
+            z-index: 1;
+        }
+
         .step-number-wrap {
-            width: 76px; height: 76px; border-radius: 50%; background: var(--white); border: 3px solid var(--orange);
-            display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;
-            box-shadow: 0 0 0 8px var(--white), 0 0 0 9px rgba(255,102,41,0.1); transition: var(--transition);
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            background: var(--white);
+            border: 3px solid var(--orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            box-shadow: 0 0 0 8px var(--white), 0 0 0 9px rgba(255, 102, 41, 0.1);
+            transition: var(--transition);
         }
-        .step-card:hover .step-number-wrap { background: var(--orange); box-shadow: 0 0 0 8px var(--white), var(--shadow-orange); }
-        .step-num { font-family: var(--font-primary); font-size: 26px; font-weight: 900; color: var(--orange); transition: var(--transition); }
-        .step-card:hover .step-num { color: var(--white); }
-        .step-title { font-family: var(--font-primary); font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
-        .step-desc { font-size: 14px; color: var(--gray-500); line-height: 1.7; }
+
+        .step-card:hover .step-number-wrap {
+            background: var(--orange);
+            box-shadow: 0 0 0 8px var(--white), var(--shadow-orange);
+        }
+
+        .step-num {
+            font-family: var(--font-primary);
+            font-size: 26px;
+            font-weight: 900;
+            color: var(--orange);
+            transition: var(--transition);
+        }
+
+        .step-card:hover .step-num {
+            color: var(--white);
+        }
+
+        .step-title {
+            font-family: var(--font-primary);
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+
+        .step-desc {
+            font-size: 14px;
+            color: var(--gray-500);
+            line-height: 1.7;
+        }
 
         /* ============================================
            CONTACT SECTION
         ============================================ */
         #contact {
-            padding: 96px 0; background: var(--navy); position: relative; overflow: hidden;
+            padding: 96px 0;
+            background: var(--navy);
+            position: relative;
+            overflow: hidden;
         }
+
         #contact::before {
-            content: ''; position: absolute; inset: 0;
-            background-image: linear-gradient(rgba(255,102,41,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,102,41,0.025) 1px, transparent 1px);
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(255, 102, 41, 0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 102, 41, 0.025) 1px, transparent 1px);
             background-size: 44px 44px;
         }
+
         .contact-glow {
-            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            width: 500px; height: 300px; background: radial-gradient(ellipse, rgba(255,102,41,0.10) 0%, transparent 70%); pointer-events: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 300px;
+            background: radial-gradient(ellipse, rgba(255, 102, 41, 0.10) 0%, transparent 70%);
+            pointer-events: none;
         }
-        .contact-content { position: relative; z-index: 10; }
 
-        .contact-header { text-align: center; margin-bottom: 60px; }
-        .contact-header .section-title { color: var(--white); }
-        .contact-header .section-title span { color: var(--orange); }
-        .contact-header .section-desc { color: rgba(255,255,255,0.55); max-width: 500px; margin: 0 auto; }
+        .contact-content {
+            position: relative;
+            z-index: 10;
+        }
 
-        .contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 860px; margin: 0 auto; }
+        .contact-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .contact-header .section-title {
+            color: var(--white);
+        }
+
+        .contact-header .section-title span {
+            color: var(--orange);
+        }
+
+        .contact-header .section-desc {
+            color: rgba(255, 255, 255, 0.55);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
         .contact-card {
-            background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09);
-            border-radius: var(--radius-lg); padding: 36px 32px; text-align: center;
-            transition: var(--transition); position: relative; overflow: hidden;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: var(--radius-lg);
+            padding: 36px 32px;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
         }
+
         .contact-card::before {
-            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-            background: linear-gradient(90deg, var(--orange), transparent); transform: scaleX(0); transform-origin: left; transition: var(--transition);
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--orange), transparent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
         }
-        .contact-card:hover { background: rgba(255,255,255,0.07); border-color: rgba(255,102,41,0.2); transform: translateY(-3px); }
-        .contact-card:hover::before { transform: scaleX(1); }
+
+        .contact-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(255, 102, 41, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .contact-card:hover::before {
+            transform: scaleX(1);
+        }
 
         .contact-avatar {
-            width: 68px; height: 68px; border-radius: 50%; margin: 0 auto 18px;
-            display: flex; align-items: center; justify-content: center;
-            font-family: var(--font-primary); font-size: 22px; font-weight: 800; color: var(--white);
-            border: 2px solid rgba(255,102,41,0.35);
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            margin: 0 auto 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-primary);
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--white);
+            border: 2px solid rgba(255, 102, 41, 0.35);
         }
+
         .contact-role {
-            font-size: 11px; font-weight: 700; color: var(--orange); text-transform: uppercase;
-            letter-spacing: 1.5px; margin-bottom: 8px;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--orange);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
         }
+
         .contact-name {
-            font-family: var(--font-primary); font-size: 18px; font-weight: 800; color: var(--white);
-            margin-bottom: 6px; line-height: 1.2;
+            font-family: var(--font-primary);
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 6px;
+            line-height: 1.2;
         }
-        .contact-divider { width: 32px; height: 2px; background: var(--orange); margin: 14px auto; border-radius: 2px; }
+
+        .contact-divider {
+            width: 32px;
+            height: 2px;
+            background: var(--orange);
+            margin: 14px auto;
+            border-radius: 2px;
+        }
+
         .contact-phone {
-            display: inline-flex; align-items: center; gap: 9px;
-            color: rgba(255,255,255,0.75); font-size: 15px; font-weight: 600;
-            padding: 10px 18px; border-radius: var(--radius-full);
-            background: rgba(255,102,41,0.1); border: 1px solid rgba(255,102,41,0.18);
-            transition: var(--transition); margin-top: 4px;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 15px;
+            font-weight: 600;
+            padding: 10px 18px;
+            border-radius: var(--radius-full);
+            background: rgba(255, 102, 41, 0.1);
+            border: 1px solid rgba(255, 102, 41, 0.18);
+            transition: var(--transition);
+            margin-top: 4px;
         }
-        .contact-phone:hover { background: var(--orange); border-color: var(--orange); color: var(--white); }
-        .contact-phone i { font-size: 13px; color: var(--orange); transition: var(--transition); }
-        .contact-phone:hover i { color: var(--white); }
+
+        .contact-phone:hover {
+            background: var(--orange);
+            border-color: var(--orange);
+            color: var(--white);
+        }
+
+        .contact-phone i {
+            font-size: 13px;
+            color: var(--orange);
+            transition: var(--transition);
+        }
+
+        .contact-phone:hover i {
+            color: var(--white);
+        }
 
         .contact-wa-btn {
-            display: inline-flex; align-items: center; gap: 8px;
-            background: #25D366; color: var(--white); font-size: 13px; font-weight: 700;
-            padding: 8px 18px; border-radius: var(--radius-full); margin-top: 12px; transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #25D366;
+            color: var(--white);
+            font-size: 13px;
+            font-weight: 700;
+            padding: 8px 18px;
+            border-radius: var(--radius-full);
+            margin-top: 12px;
+            transition: var(--transition);
         }
-        .contact-wa-btn:hover { background: #1aab52; transform: translateY(-1px); }
+
+        .contact-wa-btn:hover {
+            background: #1aab52;
+            transform: translateY(-1px);
+        }
 
         /* ============================================
            CTA
         ============================================ */
-        #cta { padding: 96px 0; background: linear-gradient(135deg, #041a38 0%, #02234A 50%, #041a38 100%); position: relative; overflow: hidden; }
+        #cta {
+            padding: 96px 0;
+            background: linear-gradient(135deg, #041a38 0%, #02234A 50%, #041a38 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
         #cta::before {
-            content: ''; position: absolute; inset: 0;
-            background-image: linear-gradient(rgba(255,102,41,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,102,41,0.025) 1px, transparent 1px);
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(255, 102, 41, 0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 102, 41, 0.025) 1px, transparent 1px);
             background-size: 40px 40px;
         }
-        .cta-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 600px; height: 280px; background: radial-gradient(ellipse, rgba(255,102,41,0.12) 0%, transparent 70%); pointer-events: none; }
-        .cta-content { position: relative; z-index: 10; text-align: center; }
-        .cta-title { font-family: var(--font-primary); font-size: clamp(30px, 4vw, 50px); font-weight: 900; color: var(--white); letter-spacing: -0.8px; line-height: 1.1; margin-bottom: 18px; }
-        .cta-title span { color: var(--orange); }
-        .cta-subtitle { font-size: 17px; color: rgba(255,255,255,0.58); max-width: 500px; margin: 0 auto 36px; line-height: 1.65; }
-        .cta-checklist { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 40px; }
-        .cta-check-item { display: flex; align-items: center; gap: 8px; font-size: 14px; color: rgba(255,255,255,0.68); }
-        .cta-check-item i { color: #4ADE80; font-size: 13px; }
-        .cta-buttons { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; }
+
+        .cta-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 280px;
+            background: radial-gradient(ellipse, rgba(255, 102, 41, 0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-family: var(--font-primary);
+            font-size: clamp(30px, 4vw, 50px);
+            font-weight: 900;
+            color: var(--white);
+            letter-spacing: -0.8px;
+            line-height: 1.1;
+            margin-bottom: 18px;
+        }
+
+        .cta-title span {
+            color: var(--orange);
+        }
+
+        .cta-subtitle {
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.58);
+            max-width: 500px;
+            margin: 0 auto 36px;
+            line-height: 1.65;
+        }
+
+        .cta-checklist {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .cta-check-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.68);
+        }
+
+        .cta-check-item i {
+            color: #4ADE80;
+            font-size: 13px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
 
         /* ============================================
            FOOTER
         ============================================ */
-        #footer { background: #010e1f; padding: 60px 0 28px; border-top: 1px solid rgba(255,255,255,0.04); }
-        .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 44px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.05); margin-bottom: 28px; }
-        .footer-brand-name { font-family: var(--font-primary); font-size: 20px; font-weight: 800; color: var(--white); margin-bottom: 12px; }
-        .footer-brand-name span { color: var(--orange); }
-        .footer-brand-desc { font-size: 13px; color: rgba(255,255,255,0.38); line-height: 1.72; max-width: 260px; margin-bottom: 22px; }
-        .footer-social { display: flex; gap: 10px; }
-        .social-btn { width: 36px; height: 36px; border-radius: var(--radius-sm); background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.45); font-size: 13px; transition: var(--transition); }
-        .social-btn:hover { background: var(--orange); border-color: var(--orange); color: var(--white); transform: translateY(-2px); }
-        .footer-col-title { font-family: var(--font-primary); font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 18px; }
-        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 11px; }
-        .footer-links li a { font-size: 13px; color: rgba(255,255,255,0.38); transition: var(--transition); display: inline-block; }
-        .footer-links li a:hover { color: var(--white); padding-left: 4px; }
-        .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
-        .footer-copy { font-size: 12px; color: rgba(255,255,255,0.26); }
-        .footer-copy a { color: rgba(255,255,255,0.42); transition: var(--transition); }
-        .footer-copy a:hover { color: var(--orange); }
-        .footer-badges { display: flex; align-items: center; gap: 10px; }
-        .footer-badge { font-size: 10px; font-weight: 600; padding: 3px 10px; border-radius: var(--radius-full); border: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.35); }
+        #footer {
+            background: #010e1f;
+            padding: 60px 0 28px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 44px;
+            padding-bottom: 44px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 28px;
+        }
+
+        .footer-brand-name {
+            font-family: var(--font-primary);
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        .footer-brand-name span {
+            color: var(--orange);
+        }
+
+        .footer-brand-desc {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.38);
+            line-height: 1.72;
+            max-width: 260px;
+            margin-bottom: 22px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: var(--radius-sm);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.45);
+            font-size: 13px;
+            transition: var(--transition);
+        }
+
+        .social-btn:hover {
+            background: var(--orange);
+            border-color: var(--orange);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .footer-col-title {
+            font-family: var(--font-primary);
+            font-size: 12px;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 18px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+        }
+
+        .footer-links li a {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.38);
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .footer-links li a:hover {
+            color: var(--white);
+            padding-left: 4px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .footer-copy {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.26);
+        }
+
+        .footer-copy a {
+            color: rgba(255, 255, 255, 0.42);
+            transition: var(--transition);
+        }
+
+        .footer-copy a:hover {
+            color: var(--orange);
+        }
+
+        .footer-badges {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-badge {
+            font-size: 10px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: var(--radius-full);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: rgba(255, 255, 255, 0.35);
+        }
 
         /* ============================================
            RESPONSIVE
         ============================================ */
         @media (max-width: 1024px) {
-            .hero-content { grid-template-columns: 1fr; text-align: center; }
-            .hero-subtitle { max-width: 100%; }
-            .hero-ctas { justify-content: center; }
-            .hero-stats-row { justify-content: center; }
-            .hero-visual { display: none; }
-            .features-grid { grid-template-columns: 1fr; }
-            .uni-grid { grid-template-columns: repeat(2, 1fr); }
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
-            .stat-item:nth-child(2)::after { display: none; }
-            .steps-container { grid-template-columns: 1fr; }
-            .steps-container::before { display: none; }
-            .contact-grid { grid-template-columns: 1fr; max-width: 480px; }
-            .footer-top { grid-template-columns: 1fr 1fr; }
-            .nav-links { display: none; }
-            .hamburger { display: flex; }
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-subtitle {
+                max-width: 100%;
+            }
+
+            .hero-ctas {
+                justify-content: center;
+            }
+
+            .hero-stats-row {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                display: none;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .uni-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stat-item:nth-child(2)::after {
+                display: none;
+            }
+
+            .steps-container {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-container::before {
+                display: none;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                max-width: 480px;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
         }
+
         @media (max-width: 768px) {
-            .features-grid { grid-template-columns: 1fr; }
-            .uni-grid { grid-template-columns: 1fr; }
-            .stats-grid { grid-template-columns: 1fr 1fr; }
-            .stat-item:nth-child(2)::after { display: none; }
-            .cta-checklist { flex-direction: column; align-items: center; }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .uni-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stat-item:nth-child(2)::after {
+                display: none;
+            }
+
+            .cta-checklist {
+                flex-direction: column;
+                align-items: center;
+            }
         }
+
         @media (max-width: 640px) {
-            .hero-title { font-size: 34px; }
-            .stats-grid { grid-template-columns: 1fr 1fr; }
-            .footer-top { grid-template-columns: 1fr; gap: 28px; }
-            .footer-bottom { flex-direction: column; text-align: center; }
-            .contact-grid { grid-template-columns: 1fr; }
+            .hero-title {
+                font-size: 34px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
+
 <body>
 
-<!-- ============================================
+    <!-- ============================================
      NAVBAR
 ============================================ -->
-<nav id="navbar" role="navigation" aria-label="Main navigation">
-    <div class="nav-inner">
-        <a href="#" class="nav-logo" id="nav-logo-link" aria-label="Partners Portal TR home">
-            Partners<span>Portal</span>&nbsp;TR<span class="dot" aria-hidden="true"></span>
-        </a>
-        <ul class="nav-links" role="list">
-            <li><a href="#features">Platform</a></li>
-            <li><a href="#universities">Universities</a></li>
-            <li><a href="#stats">Impact</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="nav-actions">
-            <a href="tel:+905376994302" class="nav-contact-link" aria-label="Call us">
-                <i class="fas fa-phone" style="margin-right:5px;font-size:11px"></i>+90 537 699 43 02
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo" id="nav-logo-link" aria-label="Admission Turkey EdTech home">
+                Admission Turkey<span>EdTech</span><span class="dot" aria-hidden="true"></span>
             </a>
-            <a href="https://www.partnersportaltr.com/login" class="nav-login-btn" id="nav-login" target="_blank" rel="noopener noreferrer">
-                <i class="fas fa-lock" aria-hidden="true"></i> Portal Login
-            </a>
-            <div class="hamburger" id="hamburger-btn" role="button" aria-label="Open navigation menu" tabindex="0">
-                <span></span><span></span><span></span>
+            <ul class="nav-links" role="list">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="tel:+905376994302" class="nav-contact-link" aria-label="Call us">
+                    <i class="fas fa-phone" style="margin-right:5px;font-size:11px"></i>+90 537 699 43 02
+                </a>
+                <a href="https://www.partnersportaltr.com/login" class="nav-login-btn" id="nav-login" target="_blank"
+                    rel="noopener noreferrer">
+                    <i class="fas fa-lock" aria-hidden="true"></i> Portal Login
+                </a>
+                <div class="hamburger" id="hamburger-btn" role="button" aria-label="Open navigation menu" tabindex="0">
+                    <span></span><span></span><span></span>
+                </div>
             </div>
         </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+        <button class="mobile-close" id="mobile-close-btn" aria-label="Close navigation menu">
+            <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+        <a href="#features" class="mobile-nav-link">Platform</a>
+        <a href="#universities" class="mobile-nav-link">Universities</a>
+        <a href="#stats" class="mobile-nav-link">Impact</a>
+        <a href="#how-it-works" class="mobile-nav-link">How It Works</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+        <a href="https://www.partnersportaltr.com/login" target="_blank" rel="noopener noreferrer" class="mob-login">
+            <i class="fas fa-lock" aria-hidden="true" style="margin-right:8px"></i> Portal Login
+        </a>
     </div>
-</nav>
 
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
-    <button class="mobile-close" id="mobile-close-btn" aria-label="Close navigation menu">
-        <i class="fas fa-times" aria-hidden="true"></i>
-    </button>
-    <a href="#features" class="mobile-nav-link">Platform</a>
-    <a href="#universities" class="mobile-nav-link">Universities</a>
-    <a href="#stats" class="mobile-nav-link">Impact</a>
-    <a href="#how-it-works" class="mobile-nav-link">How It Works</a>
-    <a href="#contact" class="mobile-nav-link">Contact</a>
-    <a href="https://www.partnersportaltr.com/login" target="_blank" rel="noopener noreferrer" class="mob-login">
-        <i class="fas fa-lock" aria-hidden="true" style="margin-right:8px"></i> Portal Login
-    </a>
-</div>
-
-<!-- ============================================
+    <!-- ============================================
      HERO
 ============================================ -->
-<section id="hero" aria-label="Hero">
-    <div class="hero-bg" aria-hidden="true"></div>
-    <div class="hero-grid" aria-hidden="true"></div>
-    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
-    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
-    <div class="hero-orb hero-orb-3" aria-hidden="true"></div>
+    <section id="hero" aria-label="Hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-3" aria-hidden="true"></div>
 
-    <div class="hero-content">
-        <!-- Left: Text -->
-        <div class="hero-left">
-            <div class="hero-badge">
-                <span class="dot" aria-hidden="true"></span>
-                Exclusive Agent Platform &mdash; Turkish Universities
+        <div class="hero-content">
+            <!-- Left: Text -->
+            <div class="hero-left">
+                <div class="hero-badge">
+                    <span class="dot" aria-hidden="true"></span>
+                    Innovative SAAS Solutions for Education
+                </div>
+                <h1 class="hero-title">
+                    Leading the Future of<br>
+                    <span class="highlight">EdTech Software</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Admission Turkey EdTech is a premier SAAS company delivering cutting-edge platforms, mobile applications, and web solutions for the global education sector.
+                </p>
+                <div class="hero-ctas">
+                    <a href="https://www.partnersportaltr.com/login" target="_blank" rel="noopener noreferrer"
+                        class="btn-primary" id="hero-login-btn">
+                        Access Portal Dashboard <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                    <a href="#features" class="btn-outline-orange" id="hero-explore-btn">
+                        <i class="fas fa-play-circle" aria-hidden="true"></i> Explore Features
+                    </a>
+                </div>
+                <div class="hero-stats-row">
+                    <div class="hero-stat-item">
+                        <div class="hero-stat-num">200<span>+</span></div>
+                        <div class="hero-stat-label">Universities</div>
+                    </div>
+                    <div class="hero-stat-item">
+                        <div class="hero-stat-num">95<span>%</span></div>
+                        <div class="hero-stat-label">Acceptance Rate</div>
+                    </div>
+                    <div class="hero-stat-item">
+                        <div class="hero-stat-num">90<span>%</span></div>
+                        <div class="hero-stat-label">Scholarship Rate</div>
+                    </div>
+                    <div class="hero-stat-item">
+                        <div class="hero-stat-num">24<span>/7</span></div>
+                        <div class="hero-stat-label">Agent Support</div>
+                    </div>
+                </div>
             </div>
-            <h1 class="hero-title">
-                Empower Your<br>
-                <span class="highlight">Education Agency</span>
-            </h1>
-            <p class="hero-subtitle">
-                Your all-in-one centralized dashboard to manage student applications, track commissions, and collaborate directly with top universities in T&uuml;rkiye.
-            </p>
-            <div class="hero-ctas">
-                <a href="https://www.partnersportaltr.com/login" target="_blank" rel="noopener noreferrer" class="btn-primary" id="hero-login-btn">
-                    Access Portal Dashboard <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                </a>
-                <a href="#features" class="btn-outline-orange" id="hero-explore-btn">
-                    <i class="fas fa-play-circle" aria-hidden="true"></i> Explore Features
-                </a>
-            </div>
-            <div class="hero-stats-row">
-                <div class="hero-stat-item">
-                    <div class="hero-stat-num">200<span>+</span></div>
-                    <div class="hero-stat-label">Universities</div>
+
+            <!-- Right: Portal Preview -->
+            <div class="hero-visual" aria-hidden="true">
+                <div class="portal-card">
+                    <div class="portal-card-header">
+                        <div class="portal-card-dots"><span></span><span></span><span></span></div>
+                        <div class="portal-card-title">Admission Turkey EdTech &mdash; Dashboard</div>
+                    </div>
+                    <div class="portal-metric-grid">
+                        <div class="portal-metric">
+                            <div class="portal-metric-label">Active Applications</div>
+                            <div class="portal-metric-value">128</div>
+                            <div class="portal-metric-change"><i class="fas fa-arrow-up" style="font-size:8px"></i> +12
+                                this week</div>
+                        </div>
+                        <div class="portal-metric accent">
+                            <div class="portal-metric-label">Commission Due</div>
+                            <div class="portal-metric-value">$8.4K</div>
+                            <div class="portal-metric-change"><i class="fas fa-arrow-up" style="font-size:8px"></i>
+                                +$1.2K</div>
+                        </div>
+                    </div>
+                    <div class="portal-app-list">
+                        <div class="portal-app-item">
+                            <div class="app-avatar" style="background:linear-gradient(135deg,#FF6629,#e55520)">AR</div>
+                            <div class="app-info">
+                                <div class="app-name">Ahmed Rahman</div>
+                                <div class="app-uni">Beykoz University &middot; Engineering</div>
+                            </div>
+                            <span class="app-status status-accepted">Accepted</span>
+                        </div>
+                        <div class="portal-app-item">
+                            <div class="app-avatar" style="background:linear-gradient(135deg,#6366F1,#4338CA)">SK</div>
+                            <div class="app-info">
+                                <div class="app-name">Sara Khan</div>
+                                <div class="app-uni">Medipol University &middot; Medicine</div>
+                            </div>
+                            <span class="app-status status-review">In Review</span>
+                        </div>
+                        <div class="portal-app-item">
+                            <div class="app-avatar" style="background:linear-gradient(135deg,#0EA5E9,#0284C7)">MT</div>
+                            <div class="app-info">
+                                <div class="app-name">Mo Tariq</div>
+                                <div class="app-uni">Istanbul Aydin &middot; Business</div>
+                            </div>
+                            <span class="app-status status-pending">Pending Docs</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="hero-stat-item">
-                    <div class="hero-stat-num">95<span>%</span></div>
-                    <div class="hero-stat-label">Acceptance Rate</div>
+                <div class="floating-badge floating-badge-1">
+                    <div class="float-badge-icon" style="background:rgba(74,222,128,0.12)">
+                        <i class="fas fa-check-circle" style="color:#4ADE80;font-size:16px"></i>
+                    </div>
+                    <div>
+                        <div class="float-badge-label">Acceptance Rate</div>
+                        <div class="float-badge-value">95% Avg.</div>
+                    </div>
                 </div>
-                <div class="hero-stat-item">
-                    <div class="hero-stat-num">90<span>%</span></div>
-                    <div class="hero-stat-label">Scholarship Rate</div>
-                </div>
-                <div class="hero-stat-item">
-                    <div class="hero-stat-num">24<span>/7</span></div>
-                    <div class="hero-stat-label">Agent Support</div>
+                <div class="floating-badge floating-badge-2">
+                    <div class="float-badge-icon" style="background:rgba(255,102,41,0.12)">
+                        <i class="fas fa-graduation-cap" style="color:var(--orange);font-size:16px"></i>
+                    </div>
+                    <div>
+                        <div class="float-badge-label">Scholarship</div>
+                        <div class="float-badge-value">Up to 100%</div>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Right: Portal Preview -->
-        <div class="hero-visual" aria-hidden="true">
-            <div class="portal-card">
-                <div class="portal-card-header">
-                    <div class="portal-card-dots"><span></span><span></span><span></span></div>
-                    <div class="portal-card-title">Partners Portal TR &mdash; Dashboard</div>
-                </div>
-                <div class="portal-metric-grid">
-                    <div class="portal-metric">
-                        <div class="portal-metric-label">Active Applications</div>
-                        <div class="portal-metric-value">128</div>
-                        <div class="portal-metric-change"><i class="fas fa-arrow-up" style="font-size:8px"></i> +12 this week</div>
-                    </div>
-                    <div class="portal-metric accent">
-                        <div class="portal-metric-label">Commission Due</div>
-                        <div class="portal-metric-value">$8.4K</div>
-                        <div class="portal-metric-change"><i class="fas fa-arrow-up" style="font-size:8px"></i> +$1.2K</div>
-                    </div>
-                </div>
-                <div class="portal-app-list">
-                    <div class="portal-app-item">
-                        <div class="app-avatar" style="background:linear-gradient(135deg,#FF6629,#e55520)">AR</div>
-                        <div class="app-info">
-                            <div class="app-name">Ahmed Rahman</div>
-                            <div class="app-uni">Beykoz University &middot; Engineering</div>
-                        </div>
-                        <span class="app-status status-accepted">Accepted</span>
-                    </div>
-                    <div class="portal-app-item">
-                        <div class="app-avatar" style="background:linear-gradient(135deg,#6366F1,#4338CA)">SK</div>
-                        <div class="app-info">
-                            <div class="app-name">Sara Khan</div>
-                            <div class="app-uni">Medipol University &middot; Medicine</div>
-                        </div>
-                        <span class="app-status status-review">In Review</span>
-                    </div>
-                    <div class="portal-app-item">
-                        <div class="app-avatar" style="background:linear-gradient(135deg,#0EA5E9,#0284C7)">MT</div>
-                        <div class="app-info">
-                            <div class="app-name">Mo Tariq</div>
-                            <div class="app-uni">Istanbul Aydin &middot; Business</div>
-                        </div>
-                        <span class="app-status status-pending">Pending Docs</span>
-                    </div>
-                </div>
-            </div>
-            <div class="floating-badge floating-badge-1">
-                <div class="float-badge-icon" style="background:rgba(74,222,128,0.12)">
-                    <i class="fas fa-check-circle" style="color:#4ADE80;font-size:16px"></i>
-                </div>
-                <div>
-                    <div class="float-badge-label">Acceptance Rate</div>
-                    <div class="float-badge-value">95% Avg.</div>
-                </div>
-            </div>
-            <div class="floating-badge floating-badge-2">
-                <div class="float-badge-icon" style="background:rgba(255,102,41,0.12)">
-                    <i class="fas fa-graduation-cap" style="color:var(--orange);font-size:16px"></i>
-                </div>
-                <div>
-                    <div class="float-badge-label">Scholarship</div>
-                    <div class="float-badge-value">Up to 100%</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================
+    <!-- ============================================
      FEATURES
 ============================================ -->
-<section id="features" aria-label="Platform Features">
-    <div class="features-intro-band">
-        <div class="container">
-            <div class="features-intro-label">The Platform</div>
-        </div>
-    </div>
-    <div class="features-body">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2 class="section-title">Inside the <span>Partner Portal</span></h2>
-                <p class="section-desc">Everything you need to scale your student recruitment business, integrated into one powerful platform.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card reveal reveal-delay-1" id="feature-tracking">
-                    <div class="feature-number" aria-hidden="true">01</div>
-                    <div class="feature-icon-wrap"><i class="fas fa-layer-group" aria-hidden="true"></i></div>
-                    <h3 class="feature-title">Application Tracking</h3>
-                    <p class="feature-desc">Submit documents and track every admission status in real-time &mdash; from initial evaluation through to final acceptance letter.</p>
-                    <ul class="feature-bullets">
-                        <li><i class="fas fa-circle-dot"></i> Real-time status updates &amp; notifications</li>
-                        <li><i class="fas fa-circle-dot"></i> Document upload &amp; checklist management</li>
-                        <li><i class="fas fa-circle-dot"></i> Multi-student portfolio view</li>
-                        <li><i class="fas fa-circle-dot"></i> Application timeline &amp; audit log</li>
-                    </ul>
-                </div>
-                <div class="feature-card reveal reveal-delay-2" id="feature-commission">
-                    <div class="feature-number" aria-hidden="true">02</div>
-                    <div class="feature-icon-wrap"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
-                    <h3 class="feature-title">Commission Dashboard</h3>
-                    <p class="feature-desc">Track earnings, view full payment histories, and forecast upcoming commissions with our intelligent financial tools.</p>
-                    <ul class="feature-bullets">
-                        <li><i class="fas fa-circle-dot"></i> Earnings overview &amp; payment schedule</li>
-                        <li><i class="fas fa-circle-dot"></i> Per-student commission breakdown</li>
-                        <li><i class="fas fa-circle-dot"></i> Revenue forecasting tools</li>
-                        <li><i class="fas fa-circle-dot"></i> Invoice generation &amp; download</li>
-                    </ul>
-                </div>
-                <div class="feature-card reveal reveal-delay-3" id="feature-database">
-                    <div class="feature-number" aria-hidden="true">03</div>
-                    <div class="feature-icon-wrap"><i class="fas fa-building-columns" aria-hidden="true"></i></div>
-                    <h3 class="feature-title">University Database</h3>
-                    <p class="feature-desc">Access constantly updated program lists, tuition fees, scholarship quotas, and ready-to-use marketing materials for 200+ universities.</p>
-                    <ul class="feature-bullets">
-                        <li><i class="fas fa-circle-dot"></i> 200+ universities with full program data</li>
-                        <li><i class="fas fa-circle-dot"></i> Scholarship availability &amp; quotas</li>
-                        <li><i class="fas fa-circle-dot"></i> Tuition fees in multiple currencies</li>
-                        <li><i class="fas fa-circle-dot"></i> Downloadable brochures &amp; media kits</li>
-                    </ul>
-                </div>
-                <div class="feature-card reveal reveal-delay-4" id="feature-support">
-                    <div class="feature-number" aria-hidden="true">04</div>
-                    <div class="feature-icon-wrap"><i class="fas fa-headset" aria-hidden="true"></i></div>
-                    <h3 class="feature-title">Direct B2B Support</h3>
-                    <p class="feature-desc">Connect instantly with our dedicated partnership support team and resolve admission queries faster than ever before.</p>
-                    <ul class="feature-bullets">
-                        <li><i class="fas fa-circle-dot"></i> Dedicated account manager assigned</li>
-                        <li><i class="fas fa-circle-dot"></i> 24/7 live chat &amp; ticket system</li>
-                        <li><i class="fas fa-circle-dot"></i> WhatsApp &amp; email escalation</li>
-                        <li><i class="fas fa-circle-dot"></i> Priority queuing for partners</li>
-                    </ul>
-                </div>
+    <section id="features" aria-label="Platform Features">
+        <div class="features-intro-band">
+            <div class="container">
+                <div class="features-intro-label">The Platform</div>
             </div>
         </div>
-    </div>
-</section>
+        <div class="features-body">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Inside <span>Admission Turkey EdTech</span></h2>
+                    <p class="section-desc">Everything you need to scale your student recruitment business, integrated
+                        into one powerful platform.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card reveal reveal-delay-1" id="feature-tracking">
+                        <div class="feature-number" aria-hidden="true">01</div>
+                        <div class="feature-icon-wrap"><i class="fas fa-layer-group" aria-hidden="true"></i></div>
+                        <h3 class="feature-title">Application Tracking</h3>
+                        <p class="feature-desc">Submit documents and track every admission status in real-time &mdash;
+                            from initial evaluation through to final acceptance letter.</p>
+                        <ul class="feature-bullets">
+                            <li><i class="fas fa-circle-dot"></i> Real-time status updates &amp; notifications</li>
+                            <li><i class="fas fa-circle-dot"></i> Document upload &amp; checklist management</li>
+                            <li><i class="fas fa-circle-dot"></i> Multi-student portfolio view</li>
+                            <li><i class="fas fa-circle-dot"></i> Application timeline &amp; audit log</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card reveal reveal-delay-2" id="feature-commission">
+                        <div class="feature-number" aria-hidden="true">02</div>
+                        <div class="feature-icon-wrap"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
+                        <h3 class="feature-title">Commission Dashboard</h3>
+                        <p class="feature-desc">Track earnings, view full payment histories, and forecast upcoming
+                            commissions with our intelligent financial tools.</p>
+                        <ul class="feature-bullets">
+                            <li><i class="fas fa-circle-dot"></i> Earnings overview &amp; payment schedule</li>
+                            <li><i class="fas fa-circle-dot"></i> Per-student commission breakdown</li>
+                            <li><i class="fas fa-circle-dot"></i> Revenue forecasting tools</li>
+                            <li><i class="fas fa-circle-dot"></i> Invoice generation &amp; download</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card reveal reveal-delay-3" id="feature-database">
+                        <div class="feature-number" aria-hidden="true">03</div>
+                        <div class="feature-icon-wrap"><i class="fas fa-building-columns" aria-hidden="true"></i></div>
+                        <h3 class="feature-title">University Database</h3>
+                        <p class="feature-desc">Access constantly updated program lists, tuition fees, scholarship
+                            quotas, and ready-to-use marketing materials for 200+ universities.</p>
+                        <ul class="feature-bullets">
+                            <li><i class="fas fa-circle-dot"></i> 200+ universities with full program data</li>
+                            <li><i class="fas fa-circle-dot"></i> Scholarship availability &amp; quotas</li>
+                            <li><i class="fas fa-circle-dot"></i> Tuition fees in multiple currencies</li>
+                            <li><i class="fas fa-circle-dot"></i> Downloadable brochures &amp; media kits</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card reveal reveal-delay-4" id="feature-support">
+                        <div class="feature-number" aria-hidden="true">04</div>
+                        <div class="feature-icon-wrap"><i class="fas fa-headset" aria-hidden="true"></i></div>
+                        <h3 class="feature-title">Direct B2B Support</h3>
+                        <p class="feature-desc">Connect instantly with our dedicated partnership support team and
+                            resolve admission queries faster than ever before.</p>
+                        <ul class="feature-bullets">
+                            <li><i class="fas fa-circle-dot"></i> Dedicated account manager assigned</li>
+                            <li><i class="fas fa-circle-dot"></i> 24/7 live chat &amp; ticket system</li>
+                            <li><i class="fas fa-circle-dot"></i> WhatsApp &amp; email escalation</li>
+                            <li><i class="fas fa-circle-dot"></i> Priority queuing for partners</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- ============================================
+    <!-- ============================================
      STATS
 ============================================ -->
-<section id="stats" aria-label="Performance Statistics">
-    <div class="container">
-        <div class="stats-grid">
-            <div class="stat-item reveal">
-                <div class="stat-icon"><i class="fas fa-university" aria-hidden="true"></i></div>
-                <div class="stat-number"><span class="counter" data-target="200">0</span><span class="accent">+</span></div>
-                <div class="stat-label">Partner Universities</div>
-            </div>
-            <div class="stat-item reveal reveal-delay-1">
-                <div class="stat-icon"><i class="fas fa-chart-pie" aria-hidden="true"></i></div>
-                <div class="stat-number"><span class="counter" data-target="95">0</span><span class="accent">%</span></div>
-                <div class="stat-label">Acceptance Rate</div>
-            </div>
-            <div class="stat-item reveal reveal-delay-2">
-                <div class="stat-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
-                <div class="stat-number"><span class="counter" data-target="90">0</span><span class="accent">%</span></div>
-                <div class="stat-label">Scholarship Rate</div>
-            </div>
-            <div class="stat-item reveal reveal-delay-3">
-                <div class="stat-icon"><i class="fas fa-clock" aria-hidden="true"></i></div>
-                <div class="stat-number">24<span class="accent">/7</span></div>
-                <div class="stat-label">Agent Support</div>
+    <section id="stats" aria-label="Performance Statistics">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-icon"><i class="fas fa-university" aria-hidden="true"></i></div>
+                    <div class="stat-number"><span class="counter" data-target="200">0</span><span
+                            class="accent">+</span></div>
+                    <div class="stat-label">Partner Universities</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-1">
+                    <div class="stat-icon"><i class="fas fa-chart-pie" aria-hidden="true"></i></div>
+                    <div class="stat-number"><span class="counter" data-target="95">0</span><span
+                            class="accent">%</span></div>
+                    <div class="stat-label">Acceptance Rate</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-2">
+                    <div class="stat-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
+                    <div class="stat-number"><span class="counter" data-target="90">0</span><span
+                            class="accent">%</span></div>
+                    <div class="stat-label">Scholarship Rate</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-3">
+                    <div class="stat-icon"><i class="fas fa-clock" aria-hidden="true"></i></div>
+                    <div class="stat-number">24<span class="accent">/7</span></div>
+                    <div class="stat-label">Agent Support</div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ============================================
+    <!-- ============================================
      UNIVERSITIES
 ============================================ -->
-<section id="universities" aria-label="Premium Partner Universities">
-    <div class="container">
-        <div class="section-header reveal">
-            <div class="section-tag">
-                <i class="fas fa-star" style="font-size:10px"></i> Premium Partners
-            </div>
-            <h2 class="section-title">Our Premium <span>Collaborations</span></h2>
-            <p class="section-desc">Through the portal, gain direct access to exclusive quotas, fast-tracked applications, and scholarships at T&uuml;rkiye's top-ranked universities.</p>
-        </div>
-
-        <div class="uni-grid">
-            <!-- Beykoz University -->
-            <div class="uni-card reveal reveal-delay-1" id="uni-beykoz">
-                <div class="uni-logo-wrap">
-                    <img src="assets/logo_beykoz.png"
-                         alt="Beykoz University Logo"
-                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="uni-logo-placeholder" style="background:linear-gradient(135deg,#7A242C,#5a1820);display:none">BU</div>
+    <section id="products" aria-label="Our Products">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-tag">
+                    <i class="fas fa-box" style="font-size:10px"></i> Our Portfolio
                 </div>
-                <div class="uni-name">Beykoz University</div>
-                <div class="uni-type">Private &mdash; Istanbul, T&uuml;rkiye</div>
-                <div class="uni-tags">
-                    <span class="uni-tag tag-priority">Priority Processing</span>
-                    <span class="uni-tag tag-quota">Exclusive Quota</span>
-                    <span class="uni-tag tag-scholarship">Scholarship Available</span>
-                </div>
+                <h2 class="section-title">Our <span>Products</span></h2>
+                <p class="section-desc">Explore our suite of SAAS solutions, platforms, and mobile applications.</p>
             </div>
 
-            <!-- Okan University -->
-            <div class="uni-card reveal reveal-delay-2" id="uni-okan">
-                <div class="uni-logo-wrap">
-                    <img src="https://www.okan.edu.tr/theme/img/logo.svg"
-                         alt="Okan University Logo"
-                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="uni-logo-placeholder" style="background:linear-gradient(135deg,#144B8E,#0d3a70);display:none">OU</div>
+            <div class="uni-grid">
+                <!-- Partners Portal -->
+                <div class="uni-card reveal reveal-delay-1">
+                    <div class="uni-name">Admission Turkey Portal</div>
+                    <div class="uni-type">SAAS Platform &mdash; Web</div>
+                    <div class="uni-tags">
+                        <span class="uni-tag tag-priority">Flagship</span>
+                    </div>
                 </div>
-                <div class="uni-name">Okan University</div>
-                <div class="uni-type">Private &mdash; Istanbul, T&uuml;rkiye</div>
-                <div class="uni-tags">
-                    <span class="uni-tag tag-priority">Priority Processing</span>
-                    <span class="uni-tag tag-scholarship">75% Scholarship</span>
+                <!-- Xuma -->
+                <div class="uni-card reveal reveal-delay-2">
+                    <div class="uni-name">Xuma</div>
+                    <div class="uni-type">Social Platform &mdash; Mobile App</div>
+                    <div class="uni-tags">
+                        <span class="uni-tag tag-quota">Flutter</span>
+                    </div>
                 </div>
-            </div>
+                <!-- Safeword -->
+                <div class="uni-card reveal reveal-delay-3">
+                    <div class="uni-name">Safeword</div>
+                    <div class="uni-type">Emergency App &mdash; Mobile App</div>
+                    <div class="uni-tags">
+                        <span class="uni-tag tag-quota">Flutter</span>
+                    </div>
+                </div>
+                <!-- Heroself -->
+                <div class="uni-card reveal reveal-delay-1">
+                    <div class="uni-name">Heroself</div>
+                    <div class="uni-type">Social Experience &mdash; Mobile App</div>
+                    <div class="uni-tags">
+                        <span class="uni-tag tag-quota">Flutter</span>
+                    </div>
+                </div>
+                <!-- Nursing App -->
+                <div class="uni-card reveal reveal-delay-2">
+                    <div class="uni-name">Nursing App</div>
+                    <div class="uni-type">Healthcare &mdash; Mobile App</div>
+                    <div class="uni-tags">
+                        <span class="uni-tag tag-quota">Flutter</span>
+                    </div>
+                </div>
+                <!-- Quicky -->
+                <div class="uni-card reveal reveal-delay-3">
+                    <div class="uni-name">Quicky</div>
+                    <div class="uni-type">Ride Hailing &mdash; Mobile App</div>
+                    <div class="uni-tags">
+                        <span class="uni-tag tag-quota">Flutter</span>
+                    </div>
+                </div>
+                <!-- Star Bazaar -->
+                <div class="uni-card reveal reveal-delay-1">
+                    <div class="uni-name">Star Bazaar</div>
+                    <div class="uni-type">Celebrity Shoutouts &mdash; Mobile App</div>
+                    <div class="uni-tags">
+                        <span class="uni-tag tag-quota">Flutter</span>
+                    </div>
+                </div>
+                <!-- Speed VPN -->
+                <div class="uni-card reveal reveal-delay-2">
+                    <div class="uni-name">Speed VPN</div>
+                    <div class="uni-type">Utility &mdash; Mobile App</div>
+                    <div class="uni-tags">
+                        <span class="uni-tag tag-quota">Flutter</span>
+                    </div>
+                </div>
+                <!-- Naqlista -->
+                <div class="uni-card reveal reveal-delay-3">
+                    <div class="uni-name">Naqlista &amp; Provider</div>
+                    <div class="uni-type">Truck Booking &mdash; Mobile App</div>
+                    <div class="uni-tags">
+                        <span class="uni-tag tag-quota">Flutter</span>
+                    </div>
+                </div>
+                <!-- Others -->
+                <div class="uni-card reveal reveal-delay-1">
+                    <div class="uni-name">Wuppertal total</div>
+                    <div class="uni-type">News &mdash; Mobile App</div>
+                </div>
+                <div class="uni-card reveal reveal-delay-2">
+                    <div class="uni-name">Wisdom Speakes</div>
+                    <div class="uni-type">Quotes &mdash; Mobile App</div>
+                </div>
+                <div class="uni-card reveal reveal-delay-3">
+                    <div class="uni-name">Camera Filters</div>
+                    <div class="uni-type">Package &mdash; Flutter</div>
+                </div>
+                <!-- Tecrix Domains -->
+                <div class="uni-card reveal reveal-delay-1">
+                    <div class="uni-name">Tecrix.org</div>
+                    <div class="uni-type">Corporate &mdash; Web</div>
+                </div>
+                <div class="uni-card reveal reveal-delay-2">
+                    <div class="uni-name">Tecrix.io</div>
+                    <div class="uni-type">Tech Solutions &mdash; Web</div>
+                </div>
+                <div class="uni-card reveal reveal-delay-3">
+                    <div class="uni-name">Tecrix.net</div>
+                    <div class="uni-type">Infrastructure &mdash; Web</div>
+                </div>
+</div>
+            </section>
 
-            <!-- Topkapi University -->
-            <div class="uni-card reveal reveal-delay-3" id="uni-topkapi">
-                <div class="uni-logo-wrap">
-                    <img src="https://www.topkapi.edu.tr/resources/files/logo_tr.jpg"
-                         alt="Topkapi University Logo"
-                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="uni-logo-placeholder" style="background:linear-gradient(135deg,#8a1328,#6b0e1e);display:none">TU</div>
-                </div>
-                <div class="uni-name">Istanbul Topkapi University</div>
-                <div class="uni-type">Private &mdash; Istanbul, T&uuml;rkiye</div>
-                <div class="uni-tags">
-                    <span class="uni-tag tag-quota">Exclusive Quota</span>
-                    <span class="uni-tag tag-scholarship">50% Scholarship</span>
-                </div>
-            </div>
-
-            <!-- ISTUN University -->
-            <div class="uni-card reveal reveal-delay-1" id="uni-istun">
-                <div class="uni-logo-wrap">
-                    <img src="assets/logo_istun.png"
-                         alt="Istanbul Saglik ve Teknoloji Universitesi Logo"
-                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="uni-logo-placeholder" style="background:linear-gradient(135deg,#d8232a,#a5181e);display:none">ISTUN</div>
-                </div>
-                <div class="uni-name">Istanbul Saglik ve Teknoloji Univ. (ISTUN)</div>
-                <div class="uni-type">Private &mdash; Istanbul, T&uuml;rkiye</div>
-                <div class="uni-tags">
-                    <span class="uni-tag tag-priority">Priority Processing</span>
-                    <span class="uni-tag tag-quota">Exclusive Quota</span>
-                </div>
-            </div>
-
-            <!-- Gelisim University -->
-            <div class="uni-card reveal reveal-delay-2" id="uni-gelisim">
-                <div class="uni-logo-wrap">
-                    <img src="assets/logo_gelisim.png"
-                         alt="Istanbul Gelisim University Logo"
-                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="uni-logo-placeholder" style="background:linear-gradient(135deg,#059669,#047857);display:none">IGU</div>
-                </div>
-                <div class="uni-name">Istanbul Gelisim University</div>
-                <div class="uni-type">Private &mdash; Istanbul, T&uuml;rkiye</div>
-                <div class="uni-tags">
-                    <span class="uni-tag tag-priority">Priority Processing</span>
-                    <span class="uni-tag tag-scholarship">75% Scholarship</span>
-                </div>
-            </div>
-
-            <!-- Istanbul Aydin University -->
-            <div class="uni-card reveal reveal-delay-3" id="uni-aydin">
-                <div class="uni-logo-wrap">
-                    <img src="assets/logo_aydin.png"
-                         alt="Istanbul Aydin University Logo"
-                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="uni-logo-placeholder" style="background:linear-gradient(135deg,#E30A17,#B30812);display:none">IAU</div>
-                </div>
-                <div class="uni-name">Istanbul Aydin University</div>
-                <div class="uni-type">Private &mdash; Istanbul, T&uuml;rkiye</div>
-                <div class="uni-tags">
-                    <span class="uni-tag tag-quota">Exclusive Quota</span>
-                    <span class="uni-tag tag-scholarship">100% Scholarship</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Ticker strip -->
-        <div class="reveal" style="margin-top:44px;text-align:center">
-            <p style="font-size:12px;color:var(--gray-500);font-weight:700;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:18px">
-                + 194 more partner universities across T&uuml;rkiye
-            </p>
-        </div>
-        <div class="uni-strip-wrapper reveal">
-            <div class="uni-strip">
-                <div class="strip-item"><i class="fas fa-university"></i> Bahcesehir University</div>
-                <div class="strip-item"><i class="fas fa-university"></i> Bilgi University</div>
-                <div class="strip-item"><i class="fas fa-university"></i> Kadir Has University</div>
-                <div class="strip-item"><i class="fas fa-university"></i> Yeditepe University</div>
-                <div class="strip-item"><i class="fas fa-university"></i> Atlas University</div>
-                <div class="strip-item"><i class="fas fa-university"></i> Medipol University</div>
-                <div class="strip-item"><i class="fas fa-university"></i> Altinbas University</div>
-                <div class="strip-item"><i class="fas fa-university"></i> Istinye University</div>
-                <div class="strip-item"><i class="fas fa-university"></i> Maltepe University</div>
-                <div class="strip-item"><i class="fas fa-university"></i> Koc University</div>
-                <div class="strip-item"><i class="fas fa-university"></i> Ozyegin University</div>
-                <div class="strip-item"><i class="fas fa-university"></i> Halic University</div>
-                <!-- Duplicate for loop -->
-                <div class="strip-item"><i class="fas fa-university"></i> Bahcesehir University</div>
-                <div class="strip-item"><i class="fas fa-university"></i> Bilgi University</div>
-                <div class="strip-item"><i class="fas fa-university"></i> Kadir Has University</div>
-                <div class="strip-item"><i class="fas fa-university"></i> Yeditepe University</div>
-                <div class="strip-item"><i class="fas fa-university"></i> Atlas University</div>
-                <div class="strip-item"><i class="fas fa-university"></i> Medipol University</div>
-                <div class="strip-item"><i class="fas fa-university"></i> Altinbas University</div>
-                <div class="strip-item"><i class="fas fa-university"></i> Istinye University</div>
-                <div class="strip-item"><i class="fas fa-university"></i> Maltepe University</div>
-                <div class="strip-item"><i class="fas fa-university"></i> Koc University</div>
-                <div class="strip-item"><i class="fas fa-university"></i> Ozyegin University</div>
-                <div class="strip-item"><i class="fas fa-university"></i> Halic University</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================
-     HOW IT WORKS
+    <!-- ============================================
+     CLIENTS
 ============================================ -->
-<section id="how-it-works" aria-label="How It Works">
-    <div class="container">
-        <div class="section-header reveal">
-            <div class="section-tag">
-                <i class="fas fa-route" style="font-size:10px"></i> Agent Journey
+    <section id="clients" aria-label="Our Clients" style="padding: 80px 0; background: var(--off-white);">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-tag">
+                    <i class="fas fa-users" style="font-size:10px"></i> Trusted By
+                </div>
+                <h2 class="section-title">Our <span>Clients</span></h2>
             </div>
-            <h2 class="section-title">How It <span>Works</span></h2>
-            <p class="section-desc">From registration to receiving your commission &mdash; the process is simple, transparent, and fully supported.</p>
-        </div>
-        <div class="steps-container">
-            <div class="step-card reveal reveal-delay-1" id="step-register">
-                <div class="step-number-wrap"><span class="step-num">1</span></div>
-                <h3 class="step-title">Register as a Partner</h3>
-                <p class="step-desc">Apply through the portal with your agency details. Our team verifies and activates your account within 24 hours, giving you instant access to all resources.</p>
-            </div>
-            <div class="step-card reveal reveal-delay-2" id="step-apply">
-                <div class="step-number-wrap"><span class="step-num">2</span></div>
-                <h3 class="step-title">Submit Student Applications</h3>
-                <p class="step-desc">Browse our university database, select the ideal programs, upload student documents, and submit applications &mdash; all from one dashboard.</p>
-            </div>
-            <div class="step-card reveal reveal-delay-3" id="step-earn">
-                <div class="step-number-wrap"><span class="step-num">3</span></div>
-                <h3 class="step-title">Track &amp; Earn Commissions</h3>
-                <p class="step-desc">Watch application statuses update in real-time. Once a student enrolls, your commission is automatically logged and processed on time, every time.</p>
+            <div class="uni-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                <div class="uni-card reveal">
+                    <div class="uni-name" style="text-align:center;">Hightech Prep</div>
+                </div>
+                <div class="uni-card reveal reveal-delay-1">
+                    <div class="uni-name" style="text-align:center;">Tecrix College</div>
+                </div>
+                <div class="uni-card reveal reveal-delay-2">
+                    <div class="uni-name" style="text-align:center;">Navigate360</div>
+                </div>
+                <div class="uni-card reveal reveal-delay-3">
+                    <div class="uni-name" style="text-align:center;">VIG</div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ============================================
+    <!-- ============================================
+     PROJECTS
+============================================ -->
+    <section id="projects" aria-label="Our Projects" style="padding: 80px 0; background: var(--white);">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-tag">
+                    <i class="fab fa-github" style="font-size:10px"></i> Open Source & More
+                </div>
+                <h2 class="section-title">Our <span>Projects</span></h2>
+                <p class="section-desc">Explore our technical projects and repositories on GitHub.</p>
+            </div>
+            <div style="text-align:center;" class="reveal">
+                <a href="https://github.com/MTalhaArif" target="_blank" class="btn-primary">
+                    <i class="fab fa-github"></i> View GitHub Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================
      CONTACT SECTION
 ============================================ -->
-<section id="contact" aria-label="Contact Our Team">
-    <div class="contact-glow" aria-hidden="true"></div>
-    <div class="container contact-content">
-        <div class="contact-header reveal">
-            <div class="section-tag section-tag-white" style="display:inline-flex;margin-bottom:20px">
-                <i class="fas fa-phone" style="font-size:10px"></i> Get In Touch
-            </div>
-            <h2 class="section-title" style="color:var(--white)">Talk to Our <span>Team</span></h2>
-            <p class="section-desc" style="color:rgba(255,255,255,0.55)">Have questions about becoming a partner or need support? Reach out directly to our leadership team.</p>
-        </div>
-
-        <div class="contact-grid">
-            <!-- Director Agency Relations -->
-            <div class="contact-card reveal reveal-delay-1" id="contact-talha">
-                <div class="contact-avatar" style="background: linear-gradient(135deg, #FF6629, #e55520);">
-                    MTA
+    <section id="contact" aria-label="Contact Our Team">
+        <div class="contact-glow" aria-hidden="true"></div>
+        <div class="container contact-content">
+            <div class="contact-header reveal">
+                <div class="section-tag section-tag-white" style="display:inline-flex;margin-bottom:20px">
+                    <i class="fas fa-phone" style="font-size:10px"></i> Get In Touch
                 </div>
-                <div class="contact-role">Director, Agency Relations</div>
-                <div class="contact-name">Muhammad Talha Arif</div>
-                <div class="contact-divider"></div>
-                <a href="tel:+905376994302" class="contact-phone" id="phone-talha">
-                    <i class="fas fa-phone"></i> +90 537 699 43 02
-                </a>
-                <br>
-                <a href="https://wa.me/905376994302?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20the%20Partners%20Portal%20TR." class="contact-wa-btn" target="_blank" rel="noopener noreferrer" id="wa-talha">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
+                <h2 class="section-title" style="color:var(--white)">Talk to Our <span>Team</span></h2>
+                <p class="section-desc" style="color:rgba(255,255,255,0.55)">Have questions about becoming a partner or
+                    need support? Reach out directly to our leadership team.</p>
             </div>
 
-            <!-- CEO -->
-            <div class="contact-card reveal reveal-delay-2" id="contact-junaid">
-                <div class="contact-avatar" style="background: linear-gradient(135deg, #02234A, #0a3060);">
-                    JQ
+            <div class="contact-grid">
+                <!-- Director Agency Relations -->
+                <div class="contact-card reveal reveal-delay-1" id="contact-talha">
+                    <div class="contact-avatar" style="background: linear-gradient(135deg, #FF6629, #e55520);">
+                        MTA
+                    </div>
+                    <div class="contact-role">Chief Technology Officer</div>
+                    <div class="contact-name">Muhammad Talha Arif</div>
+                    <div class="contact-divider"></div>
+                    <a href="tel:+905376994302" class="contact-phone" id="phone-talha">
+                        <i class="fas fa-phone"></i> +90 537 699 43 02
+                    </a>
+                    <br>
+                    <a href="https://wa.me/905376994302?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20the%20Admission%20Turkey%20EdTech."
+                        class="contact-wa-btn" target="_blank" rel="noopener noreferrer" id="wa-talha">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
                 </div>
-                <div class="contact-role">Chief Executive Officer</div>
-                <div class="contact-name">Dr. Junaid Qadir</div>
-                <div class="contact-divider"></div>
-                <a href="tel:+905075449555" class="contact-phone" id="phone-junaid">
-                    <i class="fas fa-phone"></i> +90 507 544 95 55
-                </a>
-                <br>
-                <a href="https://wa.me/905075449555?text=Hello%20Dr.%20Junaid%2C%20I%20would%20like%20to%20discuss%20a%20partnership%20with%20Partners%20Portal%20TR." class="contact-wa-btn" target="_blank" rel="noopener noreferrer" id="wa-junaid">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
+
+                <!-- CEO -->
+                <div class="contact-card reveal reveal-delay-2" id="contact-junaid">
+                    <div class="contact-avatar" style="background: linear-gradient(135deg, #02234A, #0a3060);">
+                        JQ
+                    </div>
+                    <div class="contact-role">Chief Executive Officer</div>
+                    <div class="contact-name">Dr. Junaid Qadir</div>
+                    <div class="contact-divider"></div>
+                    <a href="tel:+905075449555" class="contact-phone" id="phone-junaid">
+                        <i class="fas fa-phone"></i> +90 507 544 95 55
+                    </a>
+                    <br>
+                    <a href="https://wa.me/905075449555?text=Hello%20Dr.%20Junaid%2C%20I%20would%20like%20to%20discuss%20a%20partnership%20with%20Admission%20Turkey%20EdTech."
+                        class="contact-wa-btn" target="_blank" rel="noopener noreferrer" id="wa-junaid">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Email CTA -->
+            <div class="reveal" style="text-align:center;margin-top:40px">
+                <a href="mailto:info@studyportalturkiye.com" id="contact-email-btn"
+                    style="display:inline-flex;align-items:center;gap:9px;color:rgba(255,255,255,0.58);font-size:14px;font-weight:500;transition:var(--transition)">
+                    <i class="fas fa-envelope" style="color:var(--orange)"></i>
+                    info@studyportalturkiye.com
                 </a>
             </div>
         </div>
+    </section>
 
-        <!-- Email CTA -->
-        <div class="reveal" style="text-align:center;margin-top:40px">
-            <a href="mailto:info@studyportalturkiye.com" id="contact-email-btn" style="display:inline-flex;align-items:center;gap:9px;color:rgba(255,255,255,0.58);font-size:14px;font-weight:500;transition:var(--transition)">
-                <i class="fas fa-envelope" style="color:var(--orange)"></i>
-                info@studyportalturkiye.com
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================
+    <!-- ============================================
      CTA
 ============================================ -->
-<section id="cta" aria-label="Call to Action">
-    <div class="cta-glow" aria-hidden="true"></div>
-    <div class="container">
-        <div class="cta-content reveal">
-            <div class="section-tag section-tag-white" style="display:inline-flex;margin-bottom:22px">
-                <i class="fas fa-rocket" style="font-size:10px"></i> Ready to Scale?
-            </div>
-            <h2 class="cta-title">Start Managing Your<br><span>Students Smarter</span></h2>
-            <p class="cta-subtitle">Join hundreds of education agencies already using Partners Portal TR to grow their T&uuml;rkiye recruitment business.</p>
-            <div class="cta-checklist">
-                <div class="cta-check-item"><i class="fas fa-check-circle"></i> No setup fees</div>
-                <div class="cta-check-item"><i class="fas fa-check-circle"></i> Dedicated account manager</div>
-                <div class="cta-check-item"><i class="fas fa-check-circle"></i> 200+ universities</div>
-                <div class="cta-check-item"><i class="fas fa-check-circle"></i> Real-time commission tracking</div>
-            </div>
-            <div class="cta-buttons">
-                <a href="https://www.partnersportaltr.com/login" class="btn-primary" id="cta-login-btn" target="_blank" rel="noopener noreferrer" style="font-size:16px;padding:15px 34px">
-                    <i class="fas fa-lock"></i> Access Portal Dashboard
-                </a>
-                <a href="https://wa.me/905376994302?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20the%20Partners%20Portal%20TR." class="btn-outline-white" id="cta-wa-btn" target="_blank" rel="noopener noreferrer" style="font-size:16px;padding:13px 32px">
-                    <i class="fab fa-whatsapp"></i> Contact on WhatsApp
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================
-     FOOTER
-============================================ -->
-<footer id="footer" aria-label="Footer">
-    <div class="container">
-        <div class="footer-top">
-            <div>
-                <div class="footer-brand-name">Partners<span>Portal</span> TR</div>
-                <p class="footer-brand-desc">Empowering global education agencies with next-generation tools to connect students with top Turkish universities.</p>
-                <div class="footer-social">
-                    <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/905376994302" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <section id="cta" aria-label="Call to Action">
+        <div class="cta-glow" aria-hidden="true"></div>
+        <div class="container">
+            <div class="cta-content reveal">
+                <div class="section-tag section-tag-white" style="display:inline-flex;margin-bottom:22px">
+                    <i class="fas fa-rocket" style="font-size:10px"></i> Ready to Scale?
+                </div>
+                <h2 class="cta-title">Start Managing Your<br><span>Students Smarter</span></h2>
+                <p class="cta-subtitle">Join hundreds of education agencies already using Admission Turkey EdTech to grow
+                    their T&uuml;rkiye recruitment business.</p>
+                <div class="cta-checklist">
+                    <div class="cta-check-item"><i class="fas fa-check-circle"></i> No setup fees</div>
+                    <div class="cta-check-item"><i class="fas fa-check-circle"></i> Dedicated account manager</div>
+                    <div class="cta-check-item"><i class="fas fa-check-circle"></i> 200+ universities</div>
+                    <div class="cta-check-item"><i class="fas fa-check-circle"></i> Real-time commission tracking</div>
+                </div>
+                <div class="cta-buttons">
+                    <a href="https://www.partnersportaltr.com/login" class="btn-primary" id="cta-login-btn"
+                        target="_blank" rel="noopener noreferrer" style="font-size:16px;padding:15px 34px">
+                        <i class="fas fa-lock"></i> Access Portal Dashboard
+                    </a>
+                    <a href="https://wa.me/905376994302?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20the%20Admission%20Turkey%20EdTech."
+                        class="btn-outline-white" id="cta-wa-btn" target="_blank" rel="noopener noreferrer"
+                        style="font-size:16px;padding:13px 32px">
+                        <i class="fab fa-whatsapp"></i> Contact on WhatsApp
+                    </a>
                 </div>
             </div>
-            <div>
-                <div class="footer-col-title">Platform</div>
-                <ul class="footer-links">
-                    <li><a href="#features">Application Tracking</a></li>
-                    <li><a href="#features">Commission Dashboard</a></li>
-                    <li><a href="#features">University Database</a></li>
-                    <li><a href="#features">B2B Support</a></li>
-                    <li><a href="https://www.partnersportaltr.com/login" target="_blank" rel="noopener noreferrer">Partner Login</a></li>
-                </ul>
-            </div>
-            <div>
-                <div class="footer-col-title">Contact</div>
-                <ul class="footer-links">
-                    <li><a href="https://www.studyportalturkiye.com/" target="_blank" rel="noopener noreferrer">Study Portal T&uuml;rkiye</a></li>
-                    <li><a href="mailto:info@studyportalturkiye.com">info@studyportalturkiye.com</a></li>
-                    <li><a href="tel:+905376994302">+90 537 699 43 02</a></li>
-                    <li><a href="tel:+905075449555">+90 507 544 95 55</a></li>
-                    <li><a href="#universities">Partner Universities</a></li>
-                </ul>
-            </div>
         </div>
-        <div class="footer-bottom">
-            <p class="footer-copy">
-                &copy; 2026 Partners Portal TR &mdash; Operated by <a href="https://www.studyportalturkiye.com/" target="_blank" rel="noopener noreferrer">Study Portal T&uuml;rkiye</a>
-            </p>
-            <div class="footer-badges">
-                <span class="footer-badge">T&uuml;rkiye</span>
-                <span class="footer-badge">200+ Universities</span>
-                <span class="footer-badge">Verified Platform</span>
-            </div>
-        </div>
-    </div>
-</footer>
+    </section>
 
-<!-- ============================================
+    <!-- ============================================
+     FOOTER
+============================================ -->
+    <footer id="footer" aria-label="Footer">
+        <div class="container">
+            <div class="footer-top">
+                <div>
+                    <div class="footer-brand-name">Admission Turkey<span>EdTech</span></div>
+                    <p class="footer-brand-desc">Empowering global education agencies with next-generation tools to
+                        connect students with top Turkish universities.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/905376994302" target="_blank" rel="noopener noreferrer"
+                            class="social-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="footer-col-title">Products</div>
+                    <ul class="footer-links">
+                        <li><a href="#products">Admission Turkey Portal</a></li>
+                        <li><a href="#products">Mobile Applications</a></li>
+                        <li><a href="#products">Tecrix Solutions</a></li>
+                        <li><a href="https://www.partnersportaltr.com/login" target="_blank" rel="noopener noreferrer">Portal Login</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-col-title">Contact</div>
+                    <ul class="footer-links">
+                        <li><a href="https://www.studyportalturkiye.com/" target="_blank"
+                                rel="noopener noreferrer">Admission Turkey</a></li>
+                        <li><a href="mailto:info@studyportalturkiye.com">info@studyportalturkiye.com</a></li>
+                        <li><a href="tel:+905376994302">+90 537 699 43 02</a></li>
+                        <li><a href="tel:+905075449555">+90 507 544 95 55</a></li>
+                        <li><a href="#universities">Partner Universities</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">
+                    &copy; 2026 Admission Turkey EdTech &mdash; Operated by <a href="https://www.studyportalturkiye.com/"
+                        target="_blank" rel="noopener noreferrer">Admission Turkey</a>
+                </p>
+                <div class="footer-badges">
+                    <span class="footer-badge">T&uuml;rkiye</span>
+                    <span class="footer-badge">200+ Universities</span>
+                    <span class="footer-badge">Verified Platform</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
      JAVASCRIPT
 ============================================ -->
-<script>
-    // Navbar scroll
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        navbar.classList.toggle('scrolled', window.scrollY > 50);
-    }, { passive: true });
+    <script>
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        }, { passive: true });
 
-    // Mobile menu
-    const hamburger = document.getElementById('hamburger-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileClose = document.getElementById('mobile-close-btn');
+        // Mobile menu
+        const hamburger = document.getElementById('hamburger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileClose = document.getElementById('mobile-close-btn');
 
-    function openMobile() { mobileMenu.classList.add('open'); document.body.style.overflow = 'hidden'; }
-    function closeMobile() { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }
+        function openMobile() { mobileMenu.classList.add('open'); document.body.style.overflow = 'hidden'; }
+        function closeMobile() { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }
 
-    hamburger.addEventListener('click', openMobile);
-    hamburger.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openMobile(); } });
-    mobileClose.addEventListener('click', closeMobile);
-    document.querySelectorAll('.mobile-nav-link').forEach(l => l.addEventListener('click', closeMobile));
-    // Close mobile menu on any link inside it
-    mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', closeMobile));
+        hamburger.addEventListener('click', openMobile);
+        hamburger.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openMobile(); } });
+        mobileClose.addEventListener('click', closeMobile);
+        document.querySelectorAll('.mobile-nav-link').forEach(l => l.addEventListener('click', closeMobile));
+        // Close mobile menu on any link inside it
+        mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', closeMobile));
 
-    // Scroll reveal
-    const revealObs = new IntersectionObserver(entries => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+        // Scroll reveal
+        const revealObs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
-    // Counter animation
-    const counterObs = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            const el = entry.target;
-            const target = parseInt(el.getAttribute('data-target'));
-            const duration = 1800;
-            const start = performance.now();
-            (function update(time) {
-                const p = Math.min((time - start) / duration, 1);
-                const ease = 1 - Math.pow(1 - p, 3);
-                el.textContent = Math.floor(ease * target);
-                if (p < 1) requestAnimationFrame(update);
-                else el.textContent = target;
-            })(start);
-            counterObs.unobserve(el);
+        // Counter animation
+        const counterObs = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                const el = entry.target;
+                const target = parseInt(el.getAttribute('data-target'));
+                const duration = 1800;
+                const start = performance.now();
+                (function update(time) {
+                    const p = Math.min((time - start) / duration, 1);
+                    const ease = 1 - Math.pow(1 - p, 3);
+                    el.textContent = Math.floor(ease * target);
+                    if (p < 1) requestAnimationFrame(update);
+                    else el.textContent = target;
+                })(start);
+                counterObs.unobserve(el);
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.counter').forEach(c => counterObs.observe(c));
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                const href = a.getAttribute('href');
+                if (href === '#') { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+                const target = document.querySelector(href);
+                if (target) { e.preventDefault(); const top = target.getBoundingClientRect().top + window.pageYOffset - 80; window.scrollTo({ top, behavior: 'smooth' }); }
+            });
         });
-    }, { threshold: 0.5 });
-    document.querySelectorAll('.counter').forEach(c => counterObs.observe(c));
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-        a.addEventListener('click', e => {
-            const href = a.getAttribute('href');
-            if (href === '#') { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
-            const target = document.querySelector(href);
-            if (target) { e.preventDefault(); const top = target.getBoundingClientRect().top + window.pageYOffset - 80; window.scrollTo({ top, behavior: 'smooth' }); }
-        });
-    });
-</script>
+    </script>
 </body>
+
 </html>
